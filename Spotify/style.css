@@ -1,0 +1,114 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap);
+* {
+    box-sizing: border-box;
+    
+}
+header{
+    background-image: linear-gradient(to right, #473248,#42394B, #5D6587);
+    padding:1%;
+}
+
+.container .col-2{  /*Logo*/
+    width: 32%;
+}
+.container .col-9{ /*opcoes*/
+    display: flex;
+    width: 50%;
+    margin-top: 8px;
+    padding-left: 27%; 
+}
+.opc{
+    padding: 40px;
+}
+.container .col-3{
+    margin-top: 8px;
+    width: 1%;
+    padding-left: 4%;
+}
+
+.container .col-1{ /*perfil*/
+    padding-left: 6%;
+    margin-top: 8px;
+    display: flex;
+}
+
+.imgP{
+    display: flex;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 10px;
+    margin-right: 5px;
+}
+.flecha{
+    margin-top: 7px;
+    margin-left: 3px;
+}
+.container a{
+    font-size: 16px;
+    color: white;
+    font-family: 'Noto Sans', sans-serif;
+    text-decoration: none;
+    padding-left: 5px;
+}
+
+body{
+    background-color: black;
+    width: 100%;
+    height: auto;
+}
+
+.cont1{
+    height: 70%;
+    display: flex;
+    width: 100%;
+    background-image: linear-gradient(to right, #A36398,#8183B1, #8595C5);
+
+}
+
+.cont1 .esquerda{
+    width: 70%;
+    margin-top: 3%;
+    margin-left: 10%;
+    color: white;
+}
+
+button{
+    margin-top: 3%;
+    color: white;
+    background-color: #1ED760;
+    width: 45%;
+    font-weight: 600;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: 30px;
+    border-color: transparent;
+}
+
+.cont1 .direita{
+    width: 100%;
+    margin-top: 4%;
+    padding-bottom: 4%;
+}
+
+.cont2{
+    height: 100%;
+    margin-top: 3%;
+    margin-left: 9%;
+    color: white;
+}
+
+.musicas{ /*Todos os albuns */
+    display: flex;
+    padding: 1%;
+    margin-bottom: 3%;
+}
+.musica{ /*Cada album*/
+    padding-left: 3.5%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 2vw;
+}
