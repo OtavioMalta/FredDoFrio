@@ -3,13 +3,13 @@
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="Untitled-1.css">
+    <link rel="stylesheet" href="style.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro Cliente</title>
 </head>
 <body>
-    <!------------------------------------------------------------------------------------------------->
+        <!------------------------------------------------------------------------------------------------->
         <!--                                   MENU LATERAL                                              -->
         <!------------------------------------------------------------------------------------------------->
         <nav class="sidebar">
@@ -203,21 +203,27 @@
             $('nav ul li').click(function(){
                 $(this).addClass("active").siblings().removeClass("active");
             });
-        </script>
-        
+        </script>   
+
         <!------------------------------------------------------------------------------------------------->
-        <!--                                          PÁGINA                                             -->
+        <!--                                          Pagina                                             -->
         <!------------------------------------------------------------------------------------------------->
-        <div id="pagina">
-            <form action="" id="pag">
+                <div id="pagina">
+            <div id="cabecalho">
+                <h2>Cadastrar cliente</h2>
+            </div>
+            <!------------------------------------------------------------------------------------------------->
+            <!--                                          Pessoa Fisica                                      -->
+            <!------------------------------------------------------------------------------------------------->
+            <form action="" id="pf">
                 <!--selecionar-->
                 <div style="padding-bottom: 3%;">
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="opcao1">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" onclick="opc()" value="opcao1">
                         <label class="form-check-label" for="inlineRadio1">Pessoa física</label>
                       </div>
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="opcao2">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" onclick="opc()" value="opcao2">
                         <label class="form-check-label" for="inlineRadio2">Pessoa jurídica</label>
                     </div>
                 </div>
@@ -226,21 +232,21 @@
                 <div class="form-row">
                     <div class="form-group" style="padding-right: 5%; width: 40%;">
                         <label for="formGroupExampleInput">Nome</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="João Pereira da Silva">
+                        <input type="text" class="form-control" id="formGroupExampleInput" >
                     </div>
                     <div class="form-group" style="width: 25%;">
                         <label for="formGroupExampleInput2">CPF</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="123.456.789-01">
+                        <input type="text" class="form-control" id="formGroupExampleInput2" >
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group" style="padding-right: 5%; width: 40%;">
                         <label for="formGroupExampleInput">E-mail</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="joaopereira@gmail.com">
+                        <input type="text" class="form-control" id="formGroupExampleInput" >
                     </div>
                     <div class="form-group" style="width: 25%;">
                         <label for="formGroupExampleInput2">Celular</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="(16) 99999-9999">
+                        <input type="text" class="form-control" id="formGroupExampleInput2" >
                     </div>
                     <div class="form-check" style="padding-top:5%; padding-left: 3%;">
                         <input class="form-check-input" type="checkbox" id="gridCheck">
@@ -249,45 +255,136 @@
                         </label>
                     </div>
                 </div>
-                <div class="form-row" style="">
+                <div class="form-row">
                     <div class="form-group" style="width: 25%; padding-right: 2.5%;">
                         <label for="formGroupExampleInput2">CEP</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="(16) 99999-9999">
+                        <input type="text" class="form-control" id="formGroupExampleInput2" >
                     </div>
                     <div class="form-group" style="width: 40%; padding-left: 2.5%;">
                         <label for="formGroupExampleInput2">Endereço</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="(16) 99999-9999">
+                        <input type="text" class="form-control" id="formGroupExampleInput2" >
                     </div>
                 </div>
                 <div class="form-row">  
-                    <div class="form-group" style=" margin-right: 5%;">
-                    <label for="inputCity">Número</label>
-                    <input type="text" class="form-control" id="inputCity" >
+                        <div class="form-group" style=" margin-right: 5%;">
+                        <label for="inputCity">Número</label>
+                        <input type="text" class="form-control" id="inputCity" >
+                        </div>
+                        <div class="form-group"  style="padding-right:5%;">
+                        <label for="inputEstado">Cidade</label>
+                        <select id="inputEstado" class="form-control">
+                            <option selected>Escolher...</option>
+                            <option>...</option>
+                        </select>   
                     </div>
-                    <div class="form-group"  style="padding-right:5%;">
-                    <label for="inputEstado">Cidade</label>
-                    <select id="inputEstado" class="form-control"">
-                        <option selected>Escolher...</option>
-                        <option>...</option>
-                    </select>   
+                    <div class="form-group" >
+                        <label for="inputEstado">Estado</label>
+                        <select id="inputEstado" class="form-control">
+                            <option selected>Escolher...</option>
+                            <option>SP</option>
+                            <option>MG</option>
+                            <option>RJ</option>
+                            <option>...</option>
+                            <option>...</option>
+                            <option>...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="form-group" >
-                    <label for="inputEstado">Estado</label>
-                    <select id="inputEstado" class="form-control">
-                        <option selected>Escolher...</option>
-                        <option>...</option>
-                    </select>
+                <div class="form-row">
+                    <button type="submit" id="botao" class="btn btn-primary">Salvar</button>
                 </div>
-                <div class="form-group form-check">
-                  </div>
-                  <button type="submit" id="botao" class="btn btn-primary">Salvar</button>
+            </form>
+
+            <!------------------------------------------------------------------------------------------------->
+            <!--                                          Pessoa Juridica                                           -->
+            <!------------------------------------------------------------------------------------------------->
+            <form action="" id="pj">
+                <!--selecionar-->
+                <div style="padding-bottom: 3%;">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" onclick="opc()" value="opcao1">
+                        <label class="form-check-label" for="inlineRadio1">Pessoa física</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" onclick="opc()" value="opcao2">
+                        <label class="form-check-label" for="inlineRadio2">Pessoa jurídica</label>
+                    </div>
                 </div>
-        </form>
+                
+                <!--Digitar-->
+                <div class="form-row">
+                    <div class="form-group" style="padding-right: 5%; width: 40%;">
+                        <label for="formGroupExampleInput">Nome do Responsável</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput" >
+                    </div>
+                    <div class="form-group" style="width: 25%;">
+                        <label for="formGroupExampleInput2">CNPJ</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput2" >
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group" style="padding-right: 5%; width: 40%;">
+                        <label for="formGroupExampleInput">Nome da Empresa</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput" >
+                    </div>
+                    
+                </div>
+                <div class="form-row">
+                    <div class="form-group" style="padding-right: 5%; width: 40%;">
+                        <label for="formGroupExampleInput">E-mail</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput" >
+                    </div>
+                    <div class="form-group" style="width: 25%;">
+                        <label for="formGroupExampleInput2">Celular</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput2" >
+                    </div>
+                    <div class="form-check" style="padding-top:5%; padding-left: 3%;">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                        Possui Whatsapp?
+                        </label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group" style="width: 25%; padding-right: 2.5%;">
+                        <label for="formGroupExampleInput2">CEP</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput2" >
+                    </div>
+                    <div class="form-group" style="width: 40%; padding-left: 2.5%;">
+                        <label for="formGroupExampleInput2">Endereço</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput2" >
+                    </div>
+                </div>
+                <div class="form-row">  
+                        <div class="form-group" style=" margin-right: 5%;">
+                        <label for="inputCity">Número</label>
+                        <input type="text" class="form-control" id="inputCity" >
+                        </div>
+                        <div class="form-group"  style="padding-right:5%;">
+                        <label for="inputEstado">Cidade</label>
+                        <select id="inputEstado" class="form-control">
+                            <option selected>Escolher...</option>
+                            <option>...</option>
+                        </select>   
+                    </div>
+                    <div class="form-group" >
+                        <label for="inputEstado">Estado</label>
+                        <select id="inputEstado" class="form-control">
+                            <option selected>Escolher...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <button type="submit" id="botao" class="btn btn-primary">Salvar</button>
+                </div>
+            </form>
         </div>
-
+        
             
 
-            
+        <script src="script.js"></script>
     </body>
 </html>
 

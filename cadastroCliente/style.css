@@ -190,13 +190,15 @@
 
     /* =========================================================================================================== ======================================================== PÁGINA  =========================================       ============================================================================================================== */
     #pagina{
+
         background-color: #EFF2F5;
         width: 82%;
         height: 100%;
         margin: 10px 10px 10px 220px;
         border-radius: 30px;
         box-sizing: border-box;
-        padding-bottom: 8%;
+        padding-bottom: 2%;
+        display: grid;
     }
 
     #pagina #cabecalho{
@@ -228,7 +230,7 @@
         text-shadow: 3px 3px 5px black;
         border-radius: 30px;
         background-color: darkblue;
-    }
+    } 
     .cards .card:hover{
         margin: 0px 10px 10px 0px;
         box-shadow: 5px 5px 5px black;
@@ -299,17 +301,47 @@
 }
 
 
-#pagina #pag{
+#pagina #pf{
     padding-top: 10%;
     padding-left: 25%;
 }
-
+#pagina #pj{
+    padding-top: 10%;
+    padding-left: 25%;
+    display: none;
+}
 #botao{
     background-color: #008000;
-    height: 30%;
+    height: 50%;
     width: 9%;
     margin-top: 3%;
     border-radius: 5px;
     border-color: transparent;
-
+    margin-left: 85%;
+    margin-top: 5%;
 }
+
+input[type='radio']:after {
+    width: 12px;
+    height: 12px;
+    border-radius: 15px;
+    top: -6px;
+    left: 0px;
+    position: relative;
+    display: inline-block;
+    visibility: visible;
+}
+
+input[type='radio']:checked:after {
+    width: 12px;
+    height: 12px;
+    border-radius: 15px;
+    top: -6px;
+    left: 0px;
+    position: relative;
+    background-color: #7749F8;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+}
+
