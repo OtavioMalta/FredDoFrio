@@ -1,20 +1,12 @@
-function opc(){
-    var opcoes = document.getElementsByName("inlineRadioOptions");
-    var opcao;
-    for(var i = 0; i<opcoes.length; i++ ){
-        if(opcoes[i].checked){
-            opcao = opcoes[i].value; 
-            break;
-        }
-    }
-    if(opcao == "opcao1"){
-        document.getElementById("pf").style.display="grid";
-        document.getElementById("pj").style.display="none";
+function opcc(){
+    let escolhida = document.querySelector('input[name="pessoa"]:checked');
+
+    if(escolhida.value == "1"){
+        document.getElementById("form-pessoa-fisica").style.display="block";
+        document.getElementById("form-pessoa-juridica").style.display="none";
 
     }else{
-        document.getElementById("pf").style.display="none";
-        document.getElementById("pj").style.display="grid";
-
-
-    } 
+        document.getElementById("form-pessoa-fisica").style.display="none";
+        document.getElementById("form-pessoa-juridica").style.display="block";
+    }
 }

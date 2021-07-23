@@ -276,14 +276,13 @@
 }
 
 #pagina{
-
     background-color: #EFF2F5;
     width: 82%;
     height: 100%;
     margin: 10px 10px 10px 220px;
     border-radius: 30px;
     box-sizing: border-box;
-    padding-bottom: 8%;
+    padding-bottom: 20%;
     display: grid;
 }
 
@@ -303,18 +302,18 @@
 
 
 /*Página cliente*/
-#form-pessoa-fisica, #form-pessoa-juridica{
+#cad-forn{
     margin-left: 100px;
     margin-right: 100px;
     margin-top: 20px;
 }
     
 #linha1{
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
-#linha2, #linha3, #linha4, #linha5, #linha6{
-    margin-bottom: 15px;
+#linha2, #linha3, #linha4, #linha5{
+    margin-bottom: 30px;
 }
 
 
@@ -339,11 +338,11 @@
     margin-top: 40px;
 }
 
-#form-pessoa-juridica{
+#pj{
     display: none;
 }
 
-input[type='radio']:after {
+input[type='check-box']:after {
     width: 12px;
     height: 12px;
     border-radius: 15px;
@@ -352,7 +351,7 @@ input[type='radio']:after {
     visibility: visible;
 }
 
-input[type='radio']:checked:after {
+input[type='check-box']:checked:after {
     width: 12px;
     height: 12px;
     border-radius: 15px;
