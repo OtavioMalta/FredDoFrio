@@ -303,7 +303,7 @@
 
 
 /*Página cliente*/
-#form-pessoa-fisica, #form-pessoa-juridica{
+#form-pessoa-fisica, #form-pessoa-juridica, #form-fornecedores{
     margin-left: 100px;
     margin-right: 100px;
     margin-top: 20px;
@@ -313,12 +313,12 @@
     margin-bottom: 50px;
 }
 
-#linha2, #linha3, #linha4, #linha5, #linha6{
+.linha2, .linha3, .linha4, .linha5, .linha6, .linha7{
     margin-bottom: 15px;
 }
 
 
-.salvar-cliente{
+.salvar{
     /* position: relative;*/ 
     background-color: #28A745;
     border: none;
@@ -328,7 +328,7 @@
     border-radius: 4px;
 }
 
-.salvar-cliente:hover{
+.salvar:hover{
     transform: scale(1.2);
     border-style: unset;
 }
@@ -343,6 +343,36 @@
     display: none;
 }
 
+#pagina-fornecedores #entregas{
+    width: 400px;
+    height: 150px;
+}
+
+#pagina-cliente, #pagina-fornecedores label{
+    font-weight: bold;
+}
+
+input[type='checkbox']:after {
+    width: 12px;
+    height: 12px;
+    border-radius: 15px;
+    position: relative;
+    display: inline-block;
+    visibility: visible;
+}
+
+input[type='checkbox']:checked:after {
+    width: 12px;
+    height: 12px;
+    border-radius: 1px;
+    top: -5px;
+    left: 0px;
+    position: relative;
+    background-color: #7749F8;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+}
 input[type='radio']:after {
     width: 12px;
     height: 12px;
@@ -364,4 +394,8 @@ input[type='radio']:checked:after {
     display: inline-block;
     visibility: visible;
 }
+
+
+
+
 

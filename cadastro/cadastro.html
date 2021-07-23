@@ -5,10 +5,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylesheet.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar Cliente</title>
+    <title>Cadastro</title>
 </head>
 
 <body>
@@ -41,7 +41,7 @@
 
         <!-- SUB-MENUS -->
         <ul>
-            <li><a href="cadastroCliente.html"><i class="fas fa-chart-line"></i>Dashboard</a></li>
+            <li><a href="#"><i class="fas fa-chart-line"></i>Dashboard</a></li>
             <li>
                 <a href="#" class="cad-btn"><i class="fas fa-atlas"></i>Cadastro
                     <span class="fas fa-caret-down primeiro"></span>
@@ -213,21 +213,23 @@
     <!--                                          Pagina                                             -->
     <!------------------------------------------------------------------------------------------------->
     <div id="pagina">
-        <div id="pagina-cliente">
+        
+        <!-- cliente -->
+        <div id="pagina-cliente" style="display: none;">
             <div id="cabecalho">
                 <h2>Cadastrar cliente</h2>
             </div>
             <form action="" id="tipo-pessoa">
 
                 <!-- linha 1 -->
-                <div class="row" id="linha1">
-                    <div class="col-2" id="l1c1">
+                <div class="row linha1">
+                    <div class="col-2 l1c1">
                         <input class="form-check-input" type="radio" name="pessoa" id="inlineRadio1" value="1"
                             onclick="opcc()" checked>
-                        <label class="form-check-label" for="inlineRadio1">Pessoa física</label>
+                        <label class="form-check-label" for="inlineRadio1">Pessoa Física</label>
 
                     </div>
-                    <div class="col" id="l1c2">
+                    <div class="col l1c2">
                         <input class="form-check-input" type="radio" name="pessoa" id="inlineRadio2" value="2"
                             onclick="opcc()">
                         <label for="inlineRadio2">Pessoa Jurídica</label>
@@ -238,7 +240,7 @@
             <!--Formulário pessoa física-->
             <form action="" id="form-pessoa-fisica">
                 <!-- Linha 2 -->
-                <div class="row" id="linha2a">
+                <div class="row linha2">
                     <div class="col-7">
                         <label for="formGroupExampleInput">Nome</label>
                         <input type="text" class="form-control" id="formGroupExampleInput"
@@ -254,7 +256,7 @@
                 </div>
 
                 <!-- linha 3 -->
-                <div class="row" id="linha3">
+                <div class="row linha3">
                     <div class="col">
                         <label for="inputEstado">Estado</label>
                         <select id="inputEstado" class="form-control">
@@ -304,7 +306,7 @@
                 </div>
 
                 <!-- linha 4 -->
-                <div class="row" id="linha4">
+                <div class="row linha4">
                     <div class="col-7">
                         <label for="formGroupExampleInput">Bairo</label>
                         <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Luiz gustavo">
@@ -317,7 +319,7 @@
                 </div>
 
                 <!-- linha 5 -->
-                <div class="row" id="linha5">
+                <div class="row linha5">
                     <div class="col-7">
                         <label for="formGroupExampleInput">Ponto de referência</label>
                         <input type="text" class="form-control" id="formGroupExampleInput"
@@ -331,7 +333,7 @@
                 </div>
 
                 <!--linha 6-->
-                <div class="row" id="linha6">
+                <div class="row linha6">
                     <div class="col-7">
                         <label for="formGroupExampleInput">E-mail</label>
                         <input type="text" class="form-control" id="formGroupExampleInput"
@@ -349,7 +351,7 @@
 
                         <input type="radio" name="inlineRadioOptions1" id="inlineRadio4" onclick="opc()" value="opcao1"
                             checked>
-                        <label class="form-check-label" for="inlineRadio4">Não</label>
+                        <label for="inlineRadio4">Não</label>
                     </div>
                 </div>
                 <div class="row">
@@ -357,7 +359,7 @@
 
                     </div>
                     <div class="col-1">
-                        <button class="salvar-cliente">Salvar</button>
+                        <button class="salvar">Salvar</button>
                     </div>
                 </div>
             </form>
@@ -365,9 +367,9 @@
 
 
             <!--Formulário pessoa jurídica-->
-            <form action="" id="form-pessoa-juridica">
+            <form action="" id="form-pessoa-juridica" style="display: none;">
                 <!-- Linha 2 -->
-                <div class="row" id="linha2a">
+                <div class="row linha2">
                     <div class="col">
                         <label for="formGroupExampleInput">Nome da empresa</label>
                         <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Fred do frio">
@@ -386,7 +388,7 @@
                 </div>
 
                 <!-- linha 3 -->
-                <div class="row" id="linha3">
+                <div class="row linha3">
                     <div class="col">
                         <label for="inputEstado">Estado</label>
                         <select id="inputEstado" class="form-control">
@@ -436,7 +438,7 @@
                 </div>
 
                 <!-- linha 4 -->
-                <div class="row" id="linha4">
+                <div class="row linha4">
                     <div class="col-7">
                         <label for="formGroupExampleInput">Bairo</label>
                         <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Luiz gustavo">
@@ -449,7 +451,7 @@
                 </div>
 
                 <!-- linha 5 -->
-                <div class="row" id="linha5">
+                <div class="row linha5">
                     <div class="col-7">
                         <label for="formGroupExampleInput">Ponto de referência</label>
                         <input type="text" class="form-control" id="formGroupExampleInput"
@@ -463,7 +465,7 @@
                 </div>
 
                 <!--linha 6-->
-                <div class="row" id="linha6">
+                <div class="row linha6">
                     <div class="col-7">
                         <label for="formGroupExampleInput">E-mail</label>
                         <input type="text" class="form-control" id="formGroupExampleInput"
@@ -476,12 +478,12 @@
                     <div class="col-2">
                         <label for="formGroupExampleInput" style="display: block; font-size: 15px;">Possui
                             whatsapp?</label>
-                        <input type="radio" name="inlineRadioOptions1" id="inlineRadio5" onclick="opc()" value="opcao1">
-                        <label class="form-check-label" for="inlineRadio5">Sim</label>
+                        <input type="radio" name="inlineRadioOptions1" id="inlineRadio3" onclick="opc()" value="opcao1">
+                        <label class="form-check-label" for="inlineRadio3">Sim</label>
 
-                        <input type="radio" name="inlineRadioOptions1" id="inlineRadio6" onclick="opc()" value="opcao1"
+                        <input type="radio" name="inlineRadioOptions1" id="inlineRadio4" onclick="opc()" value="opcao1"
                             checked>
-                        <label class="form-check-label" for="inlineRadio6">Não</label>
+                        <label for="inlineRadio4">Não</label>
                     </div>
                 </div>
 
@@ -490,12 +492,168 @@
 
                     </div>
                     <div class="col-1">
-                        <button class="salvar-cliente">Salvar</button>
+                        <button class="salvar">Salvar</button>
                     </div>
                 </div>
             </form>
         </div>
 
+        <!-- fornecedores -->
+
+        <div id="pagina-fornecedores">
+            <div id="cabecalho">
+                <h2>Cadastrar Fornecedores</h2>
+            </div>
+            <form action="" id="form-fornecedores">
+                <!-- Linha 2 -->
+                <div class="row linha2">
+                    <div class="col">
+                        <label for="formGroupExampleInput">Nome da empresa</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Fred do frio">
+                    </div>
+                    <div class="col">
+                        <label for="formGroupExampleInput">Nome do reponsável</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Marcos Pereira">
+                    </div>
+                    <div class="col-2">
+
+                        <label for="formGroupExampleInput2">CNPJ</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput2"
+                            placeholder="00.000.0000/0000-00">
+                    </div>
+
+                </div>
+
+                <!-- linha 3 -->
+                <div class="row linha3">
+                    <div class="col">
+                        <label for="inputEstado">Estado</label>
+                        <select id="inputEstado" class="form-control">
+                            <option selected>Escolher...</option>
+                            <option value="estado">Selecione o Estado</option>
+                            <option value="ac">Acre</option>
+                            <option value="al">Alagoas</option>
+                            <option value="am">Amazonas</option>
+                            <option value="ap">Amapá</option>
+                            <option value="ba">Bahia</option>
+                            <option value="ce">Ceará</option>
+                            <option value="df">Distrito Federal</option>
+                            <option value="es">Espírito Santo</option>
+                            <option value="go">Goiás</option>
+                            <option value="ma">Maranhão</option>
+                            <option value="mt">Mato Grosso</option>
+                            <option value="ms">Mato Grosso do Sul</option>
+                            <option value="mg">Minas Gerais</option>
+                            <option value="pa">Pará</option>
+                            <option value="pb">Paraíba</option>
+                            <option value="pr">Paraná</option>
+                            <option value="pe">Pernambuco</option>
+                            <option value="pi">Piauí</option>
+                            <option value="rj">Rio de Janeiro</option>
+                            <option value="rn">Rio Grande do Norte</option>
+                            <option value="ro">Rondônia</option>
+                            <option value="rs">Rio Grande do Sul</option>
+                            <option value="rr">Roraima</option>
+                            <option value="sc">Santa Catarina</option>
+                            <option value="se">Sergipe</option>
+                            <option value="sp">São Paulo</option>
+                            <option value="to">Tocantins</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="inputEstado">Cidade</label>
+                        <select id="inputEstado" class="form-control">
+                            <option selected>Escolher...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col-2">
+                        <label for="formGroupExampleInput2">CEP</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="00000-000">
+                    </div>
+
+                </div>
+
+                <!-- linha 4 -->
+                <div class="row linha4">
+                    <div class="col-7">
+                        <label for="formGroupExampleInput">Bairo</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Luiz gustavo">
+                    </div>
+                    <div class="col">
+                        <label for="formGroupExampleInput">Logradouro</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Rua 1">
+                    </div>
+
+                </div>
+
+                <!-- linha 5 -->
+                <div class="row linha5">
+                    <div class="col-7">
+                        <label for="formGroupExampleInput">Ponto de referência</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput"
+                            placeholder="De frente ao clube do Emanuel">
+                    </div>
+                    <div class="col">
+                        <label for="formGroupExampleInput">Complemento</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Casa">
+                    </div>
+
+                </div>
+
+                <!--linha 6-->
+                <div class="row linha6">
+                    <div class="col-7">
+                        <label for="formGroupExampleInput">E-mail</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput"
+                            placeholder="joaopereira@gmail.com">
+                    </div>
+                    <div class="col">
+                        <label for="formGroupExampleInput">Telefone</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="(00) 000000000">
+                    </div>
+                    <div class="col-2">
+                        <label for="formGroupExampleInput" style="display: block; font-size: 15px;">Possui
+                            whatsapp?</label>
+                        <input type="radio" name="inlineRadioOptions1" id="inlineRadio3" onclick="opc()" value="opcao1">
+                        <label class="form-check-label" for="inlineRadio3">Sim</label>
+
+                        <input type="radio" name="inlineRadioOptions1" id="inlineRadio4" onclick="opc()" value="opcao1"
+                            checked>
+                        <label for="inlineRadio4">Não</label>
+                    </div>
+                </div>
+                
+                <!-- linha 7 -->
+                <div class="row linha7">
+                    <div class="col-7">
+                        <label for="entregas" style="display: block;">Regiões de Entrega</label>
+                        <textarea id="entregas" placeholder="EX.: Todas as cidades do piauí"></textarea>
+                    </div>
+                    <div class="col">
+                        <label for="validationTextarea" style="display: block;">Segmentos</label>
+                        <input type="checkbox" id="vehicle1" name="vehicle1" value="">
+                        <label for="vehicle1"> I have a bike</label><br>
+                        <input type="checkbox" id="vehicle2" name="vehicle2" value="">
+                        <label for="vehicle2"> I have a car</label><br>
+                        <input type="checkbox" id="vehicle3" name="vehicle3" value="">
+                        <label for="vehicle3"> I have a boat</label><br>
+                        <input type="checkbox" id="vehicle4" name="vehicle4" value="">
+                        <label for="vehicle4"> I have a boat</label><br>
+                        <input type="checkbox" id="vehicle5" name="vehicle5" value="">
+                        <label for="vehicle5"> I have a boat</label><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+
+                    </div>
+                    <div class="col-1">
+                        <button class="salvar">Salvar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
 
         <!--fim página-->
     </div>
