@@ -302,7 +302,7 @@
 }
 
 
-/*Página cliente*/
+/*CSS Cliente + Fornecedor*/
 #form-pessoa-fisica, #form-pessoa-juridica, #form-fornecedores{
     margin-left: 100px;
     margin-right: 100px;
@@ -385,6 +385,7 @@ input[type='radio']:after {
 input[type='radio']:checked:after {
     width: 12px;
     height: 12px;
+    border
     border-radius: 15px;
     top: -5.5px;
     left: 0px;
