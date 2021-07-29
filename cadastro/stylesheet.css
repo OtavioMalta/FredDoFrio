@@ -385,7 +385,6 @@ input[type='radio']:after {
 input[type='radio']:checked:after {
     width: 12px;
     height: 12px;
-    border
     border-radius: 15px;
     top: -5.5px;
     left: 0px;
