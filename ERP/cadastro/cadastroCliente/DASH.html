@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Novo Menu</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css ">
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script defer src="https://kit.fontawesome.com/3f3417947e.js"></script>
+    </head>
+    <body>
+        <!------------------------------------------------------------------------------------------------->
+        <!--                                   MENU LATERAL                                              -->
+        <!------------------------------------------------------------------------------------------------->
+        <nav class="sidebar">
+            <div class="perfil">
+                <div class="logo">
+                    <img src="img/Logo.png" width="75px" height="75px">
+                </div>
+                <div class="usuario">
+                    <h1>Fred do Frio</h1>
+                    <a href="#">@Usuário</a>
+                </div>
+            </div>
+            <!-- ICONES -->
+            <div class="icones">
+                <i class="fas fa-cog"></i>
+                <i class="far fa-question-circle"></i>
+                <i class="fas fa-bell"></i>
+            </div>
+            <!-- CAMPO DE BUSCA -->
+            <div class="area-de-pesquisa">
+                <form class="pesquisa">
+                    <input type="search" id="barra" placeholder="Buscar">
+                    <i class="fas fa-search"></i>
+                </form>
+            </div>
+
+            <!-- SUB-MENUS -->
+            <ul>
+                <li><a href="#"><i class="fas fa-chart-line"></i>Dashboard</a></li>
+                <li>
+                    <a href="#" class="cad-btn"><i class="fas fa-atlas"></i>Cadastro
+                        <span class="fas fa-caret-down primeiro"></span>
+                    </a>
+                    <ul class="mostre-cad">
+                        <li><a href="cliente.html">Clientes</a></li>
+                        <li><a href="#">Fornecedores</a></li>
+                        <li><a href="#">Produtos</a></li>
+                        <li><a href="#">Serviços</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="estoque-btn"><i class="fas fa-cubes"></i>Estoque
+                        <span class="fas fa-caret-down segundo"></span>
+                    </a>
+                    <ul class="mostre-stock">
+                        <li><a href="#">Controle de Estoque</a></li>
+                        <li><a href="#">Cotação Online</a></li>
+                        <li><a href="#">Compras</a></li>
+                        <li><a href="#">Transferências</a></li>
+                        <li><a href="#">Etiquetas</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="vendas-btn"><i class="fas fa-cash-register"></i>Vendas
+                        <span class="fas fa-caret-down terceiro"></span>
+                    </a>
+                    <ul class="mostre-vendas">
+                        <li><a href="#">Orçamentos</a></li>
+                        <li><a href="#">Vendas</a></li>
+                        <li><a href="#">PDV</a></li>
+                        <li><a href="#">Ordens de Serviços</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="financeiro-btn"><i class="fas fa-money-bill-wave-alt"></i>Financeiro
+                        <span class="fas fa-caret-down quarto"></span>
+                    </a>
+                    <ul class="mostre-financeiro">
+                        <li><a href="#">Controle Financeiro</a></li>
+                        <li><a href="#">Contas a Pagar</a></li>
+                        <li><a href="#">Contas a Receber</a></li>
+                        <li><a href="#">Fluxo de Caixa</a></li>
+                        <li><a href="#">Conciliação Bancária</a></li>
+                        <li><a href="#">Emissão de Boletos</a></li>
+                        <li><a href="#">Carnê de Pagamento</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="relatorios-btn"><i class="fas fa-clipboard-list"></i>Relatórios
+                        <span class="fas fa-caret-down quinto"></span>
+                    </a>
+                    <ul class="mostre-relatorios">
+                        <li><a href="#">Relatórios</a></li>
+                        <li><a href="#">Cadastro</a></li>
+                        <li><a href="#">Financeiro</a></li>
+                        <li><a href="#">Vendas</a></li>
+                        <li><a href="#">Estoque</a></li>
+                        <li><a href="#">Locações</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="notas-btn"><i class="fas fa-receipt"></i>Notas Fiscais
+                        <span class="fas fa-caret-down sexto"></span>
+                    </a>
+                    <ul class="mostre-notas">
+                        <li><a href="#">Emissão de NF-e</a></li>
+                        <li><a href="#">Emissão de NFS-e</a></li>
+                        <li><a href="#">Emissão de NFC-e</a></li>
+                        <li><a href="#">Importar XML</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="lojas-btn"><i class="fas fa-store"></i>Lojas
+                        <span class="fas fa-caret-down setimo"></span>
+                    </a>
+                    <ul class="mostre-lojas">
+                        <li><a href="#">Multiempresas</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="contratos-btn"><i class="fas fa-file-signature"></i>Contratos
+                        <span class="fas fa-caret-down oitavo"></span>
+                    </a>
+                    <ul class="mostre-contratos">
+                        <li><a href="#">Gestão de Contratos</a></li>
+                        <li><a href="#">Locações</a></li>
+                        <li><a href="#">Serviços</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="atendimentos-btn"><i class="fas fa-headset"></i>Atendimentos
+                        <span class="fas fa-caret-down nono"></span>
+                    </a>
+                    <ul class="mostre-atendimentos">
+                        <li><a href="#">Chamadas</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="agenda-btn"><i class="far fa-calendar-check"></i>Agenda
+                        <span class="fas fa-caret-down decimo"></span>
+                    </a>
+                    <ul class="mostre-agenda">
+                        <li><a href="https://workspace.google.com/intl/pt-BR/products/calendar/?utm_source=google&utm_medium=cpc&utm_campaign=latam-BR-all-pt-dr-bkws-all-all-trial-e-dr-1009897-LUAC0011905&utm_content=text-ad-none-any-DEV_c-CRE_477535132992-ADGP_Hybrid%20%7C%20BKWS%20-%20MIX%20%7C%20Txt%20~%20Calendar_Agenda-KWID_43700057676888723-kwd-7375707350&utm_term=KW_google%20agenda-ST_google%20agenda&gclid=CjwKCAjw-qeFBhAsEiwA2G7Nl1cfANCMQ9NxU3yBq0Jxh9jmwZnC8tjWpm4pZBhELI09eTEIVnCMIBoCdKAQAvD_BwE&gclsrc=aw.ds" target="_blank">Agenda Online</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="funcionarios-btn"><i class="fas fa-id-badge"></i>Funcionários
+                        <span class="fas fa-caret-down decimo-primeiro"></span>
+                    </a>
+                    <ul class="mostre-funcionarios">
+                        <li><a href="#">Perfil de Acesso</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav> 
+        <script>
+            $('.cad-btn').click(function(){
+            $('nav ul .mostre-cad').toggleClass("show");
+            $('nav ul .primeiro').toggleClass("rotate");
+            });
+            $('.estoque-btn').click(function(){
+            $('nav ul .mostre-stock').toggleClass("show1");
+            $('nav ul .segundo').toggleClass("rotate");
+            });
+            $('.vendas-btn').click(function(){
+            $('nav ul .mostre-vendas').toggleClass("show2");
+            $('nav ul .terceiro').toggleClass("rotate");
+            });
+            $('.financeiro-btn').click(function(){
+            $('nav ul .mostre-financeiro').toggleClass("show3");
+            $('nav ul .quarto').toggleClass("rotate");
+            });
+            $('.relatorios-btn').click(function(){
+            $('nav ul .mostre-relatorios').toggleClass("show4");
+            $('nav ul .quinto').toggleClass("rotate");
+            });
+            $('.notas-btn').click(function(){
+            $('nav ul .mostre-notas').toggleClass("show5");
+            $('nav ul .sexto').toggleClass("rotate");
+            });
+            $('.lojas-btn').click(function(){
+            $('nav ul .mostre-lojas').toggleClass("show6");
+            $('nav ul .setimo').toggleClass("rotate");
+            });
+            $('.contratos-btn').click(function(){
+            $('nav ul .mostre-contratos').toggleClass("show7");
+            $('nav ul .oitavo').toggleClass("rotate");
+            });
+            $('.atendimentos-btn').click(function(){
+            $('nav ul .mostre-atendimentos').toggleClass("show8");
+            $('nav ul .nono').toggleClass("rotate");
+            });
+            $('.agenda-btn').click(function(){
+            $('nav ul .mostre-agenda').toggleClass("show9");
+            $('nav ul .decimo').toggleClass("rotate");
+            });
+            $('.funcionarios-btn').click(function(){
+            $('nav ul .mostre-funcionarios').toggleClass("show10");
+            $('nav ul .decimo-primeiro').toggleClass("rotate");
+            });
+            $('nav ul li').click(function(){
+                $(this).addClass("active").siblings().removeClass("active");
+            });
+        </script>
+        
+        <!------------------------------------------------------------------------------------------------->
+        <!--                                          PÁGINA                                             -->
+        <!------------------------------------------------------------------------------------------------->
+        <div id="pagina">
+            <!-- TITULO -->
+            <div id="cabecalho">
+                <h2>Dashboard</h2>
+            </div>
+
+            <!-- CARDS -->
+            <div class="cards">
+                <div class="card card1">
+                    <div class="flex">
+                        <img src="https://img.icons8.com/plasticine/100/000000/receive-cash.png " width="75px" height="75px" />
+                        <div class="texto">
+                            <h3 class="titulo">A receber hoje</h3>
+                        </div>
+                    </div>
+                    <div class="valor">
+                        <p>R$0,00</p>
+                    </div>
+                    <div class="details ">
+                        <p>Mais detalhes</p>
+                    </div>
+                </div>
+
+                <div class="card card2 ">
+                    <div class="flex">
+                        <img src="https://img.icons8.com/plasticine/100/000000/request-money.png " width="75px" height="75px" />
+                        <div class="texto">
+                            <h3>A pagar hoje</h3>
+                        </div>
+                    </div>
+                    <div class="valor">
+                        <p>R$0,00</p>
+                    </div>
+                    <div class="details ">
+                        <p>Mais detalhes</p>
+                    </div>
+        
+                </div>
+                <div class="card card3 ">
+                    <div class="flex">
+                        <img src="https://img.icons8.com/cotton/64/000000/love-for-money.png " width="75px" height="75px" />
+                        <div class="texto">
+                            <h3>Recebimentos<br> do mês</h3>
+                        </div>
+                    </div>
+                    <div class="valor">
+                        <p>R$0,00</p>
+                    </div>
+                    <div class="details ">
+                        <p>Mais detalhes</p>
+                    </div>
+        
+                </div>
+                <div class="card card4 ">
+                    <div class="flex">
+                        <img src="https://img.icons8.com/clouds/100/000000/money.png " width="75px" height="75px" />
+                        <div class="texto">
+                            <h3>Pagamentos<br> do mês</h3>
+                        </div>
+                    </div>
+                    <div class="valor">
+                        <p>R$0,00</p>
+                    </div>
+                    <div class="details ">
+                        <p>Mais detalhes</p>
+                    </div>
+                </div>
+            </div>
+
+            <!----------------------------------------------------------------------------------------->
+            <!--                                   GRÁFICOS                                          -->
+            <!----------------------------------------------------------------------------------------->
+            <div class="sessao1">
+                <div class="grafico1">
+                    <div class="ttl">
+                        <p>Vendas do mês</p>
+                    </div>
+                    <div id="chartdiv">
+                        <!-- Chart code -->
+                        <script>
+                            am4core.ready(function() {
+                            
+                            // Themes begin
+                            am4core.useTheme(am4themes_animated);
+                            // Themes end
+                            
+                            // Create chart instance
+                            var container = am4core.create("chartdiv", am4core.Container);
+                            container.layout = "grid";
+                            container.fixedWidthGrid = false;
+                            container.width = am4core.percent(100);
+                            container.height = am4core.percent(100);
+                            
+                            // Color set
+                            var colors = new am4core.ColorSet();
+                            
+                            // Functions that create various sparklines
+                            function createLine(title, data, color) {
+                            
+                                var chart = container.createChild(am4charts.XYChart);
+                                chart.width = am4core.percent(45);
+                                chart.height = 70;
+                            
+                                chart.data = data;
+                            
+                                chart.titles.template.fontSize = 10;
+                                chart.titles.template.textAlign = "left";
+                                chart.titles.template.isMeasured = false;
+                                chart.titles.create().text = title;
+                            
+                                chart.padding(20, 5, 2, 5);
+                            
+                                var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+                                dateAxis.renderer.grid.template.disabled = true;
+                                dateAxis.renderer.labels.template.disabled = true;
+                                dateAxis.startLocation = 0.5;
+                                dateAxis.endLocation = 0.7;
+                                dateAxis.cursorTooltipEnabled = false;
+                            
+                                var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+                                valueAxis.min = 0;
+                                valueAxis.renderer.grid.template.disabled = true;
+                                valueAxis.renderer.baseGrid.disabled = true;
+                                valueAxis.renderer.labels.template.disabled = true;
+                                valueAxis.cursorTooltipEnabled = false;
+                            
+                                chart.cursor = new am4charts.XYCursor();
+                                chart.cursor.lineY.disabled = true;
+                                chart.cursor.behavior = "none";
+                            
+                                var series = chart.series.push(new am4charts.LineSeries());
+                                series.tooltipText = "{date}: [bold]{value}";
+                                series.dataFields.dateX = "date";
+                                series.dataFields.valueY = "value";
+                                series.tensionX = 0.8;
+                                series.strokeWidth = 2;
+                                series.stroke = color;
+                            
+                                // render data points as bullets
+                                var bullet = series.bullets.push(new am4charts.CircleBullet());
+                                bullet.circle.opacity = 0;
+                                bullet.circle.fill = color;
+                                bullet.circle.propertyFields.opacity = "opacity";
+                                bullet.circle.radius = 3;
+                            
+                                return chart;
+                            }
+                            
+                            function createColumn(title, data, color) {
+                            
+                                var chart = container.createChild(am4charts.XYChart);
+                                chart.width = am4core.percent(45);
+                                chart.height = 70;
+                            
+                                chart.data = data;
+                            
+                                chart.titles.template.fontSize = 10;
+                                chart.titles.template.textAlign = "left";
+                                chart.titles.template.isMeasured = false;
+                                chart.titles.create().text = title;
+                            
+                                chart.padding(20, 5, 2, 5);
+                            
+                                var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+                                dateAxis.renderer.grid.template.disabled = true;
+                                dateAxis.renderer.labels.template.disabled = true;
+                                dateAxis.cursorTooltipEnabled = false;
+                            
+                                var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+                                valueAxis.min = 0;
+                                valueAxis.renderer.grid.template.disabled = true;
+                                valueAxis.renderer.baseGrid.disabled = true;
+                                valueAxis.renderer.labels.template.disabled = true;
+                                valueAxis.cursorTooltipEnabled = false;
+                            
+                                chart.cursor = new am4charts.XYCursor();
+                                chart.cursor.lineY.disabled = true;
+                            
+                                var series = chart.series.push(new am4charts.ColumnSeries());
+                                series.tooltipText = "{date}: [bold]{value}";
+                                series.dataFields.dateX = "date";
+                                series.dataFields.valueY = "value";
+                                series.strokeWidth = 0;
+                                series.fillOpacity = 0.5;
+                                series.columns.template.propertyFields.fillOpacity = "opacity";
+                                series.columns.template.fill = color;
+                            
+                                return chart;
+                            }
+                            
+                            function createPie(data, color) {
+                            
+                                var chart = container.createChild(am4charts.PieChart);
+                                chart.width = am4core.percent(10);
+                                chart.height = 70;
+                                chart.padding(20, 0, 2, 0);
+                            
+                                chart.data = data;
+                            
+                                // Add and configure Series
+                                var pieSeries = chart.series.push(new am4charts.PieSeries());
+                                pieSeries.dataFields.value = "value";
+                                pieSeries.dataFields.category = "category";
+                                pieSeries.labels.template.disabled = true;
+                                pieSeries.ticks.template.disabled = true;
+                                pieSeries.slices.template.fill = color;
+                                pieSeries.slices.template.adapter.add("fill", function(fill, target) {
+                                return fill.lighten(0.1 * target.dataItem.index);
+                                });
+                                pieSeries.slices.template.stroke = am4core.color("#fff");
+                            
+                                // chart.chartContainer.minHeight = 40;
+                                // chart.chartContainer.minWidth = 40;
+                            
+                                return chart;
+                            }
+                            
+                            
+                            createLine("AAPL (Price)", [
+                                { "date": new Date(2018, 0, 1, 8, 0, 0), "value": 57 },
+                                { "date": new Date(2018, 0, 1, 9, 0, 0), "value": 27 },
+                                { "date": new Date(2018, 0, 1, 10, 0, 0), "value": 24 },
+                                { "date": new Date(2018, 0, 1, 11, 0, 0), "value": 59 },
+                                { "date": new Date(2018, 0, 1, 12, 0, 0), "value": 33 },
+                                { "date": new Date(2018, 0, 1, 13, 0, 0), "value": 46 },
+                                { "date": new Date(2018, 0, 1, 14, 0, 0), "value": 20 },
+                                { "date": new Date(2018, 0, 1, 15, 0, 0), "value": 42 },
+                                { "date": new Date(2018, 0, 1, 16, 0, 0), "value": 59, "opacity": 1}
+                            ], colors.getIndex(0));
+                            
+                            createColumn("AAPL (Turnover)", [
+                                { "date": new Date(2018, 0, 1, 8, 0, 0), "value": 22 }, 
+                                { "date": new Date(2018, 0, 1, 9, 0, 0), "value": 25 }, 
+                                { "date": new Date(2018, 0, 1, 10, 0, 0), "value": 40 }, 
+                                { "date": new Date(2018, 0, 1, 11, 0, 0), "value": 35 }, 
+                                { "date": new Date(2018, 0, 1, 12, 0, 0), "value": 29 }, 
+                                { "date": new Date(2018, 0, 1, 13, 0, 0), "value": 1 }, 
+                                { "date": new Date(2018, 0, 1, 14, 0, 0), "value": 15 }, 
+                                { "date": new Date(2018, 0, 1, 15, 0, 0), "value": 29 }, 
+                                { "date": new Date(2018, 0, 1, 16, 0, 0), "value": 33, "opacity": 1 }
+                            ], colors.getIndex(0));
+                            
+                            createPie([
+                                { "category": "Marketing", "value": 501 }, 
+                                { "category": "Research", "value": 301 }, 
+                                { "category": "Sales", "value": 201 }, 
+                                { "category": "HR", "value": 165 }
+                            ], colors.getIndex(0));
+                            
+                            createLine("MSFT (Price)", [
+                                { "date": new Date(2018, 0, 1, 8, 0, 0), "value": 22 }, 
+                                { "date": new Date(2018, 0, 1, 9, 0, 0), "value": 25 }, 
+                                { "date": new Date(2018, 0, 1, 10, 0, 0), "value": 40 }, 
+                                { "date": new Date(2018, 0, 1, 11, 0, 0), "value": 35 }, 
+                                { "date": new Date(2018, 0, 1, 12, 0, 0), "value": 29 }, 
+                                { "date": new Date(2018, 0, 1, 13, 0, 0), "value": 1 }, 
+                                { "date": new Date(2018, 0, 1, 14, 0, 0), "value": 15 }, 
+                                { "date": new Date(2018, 0, 1, 15, 0, 0), "value": 29 }, 
+                                { "date": new Date(2018, 0, 1, 16, 0, 0), "value": 33, "opacity": 1 }
+                            ], colors.getIndex(1));
+                            
+                            createColumn("MSFT (Turnover)", [
+                                { "date": new Date(2018, 0, 1, 8, 0, 0), "value": 57 }, 
+                                { "date": new Date(2018, 0, 1, 9, 0, 0), "value": 27 }, 
+                                { "date": new Date(2018, 0, 1, 10, 0, 0), "value": 24 }, 
+                                { "date": new Date(2018, 0, 1, 11, 0, 0), "value": 59 }, 
+                                { "date": new Date(2018, 0, 1, 12, 0, 0), "value": 33 }, 
+                                { "date": new Date(2018, 0, 1, 13, 0, 0), "value": 46 }, 
+                                { "date": new Date(2018, 0, 1, 14, 0, 0), "value": 20 }, 
+                                { "date": new Date(2018, 0, 1, 15, 0, 0), "value": 42 }, 
+                                { "date": new Date(2018, 0, 1, 16, 0, 0), "value": 59, "opacity": 1 }
+                            ], colors.getIndex(1));
+                            
+                            createPie([
+                                { "category": "Marketing", "value": 130 }, 
+                                { "category": "Research", "value": 450 }, 
+                                { "category": "Sales", "value": 400 }, 
+                                { "category": "HR", "value": 200 }
+                            ], colors.getIndex(1));
+                            
+                            createLine("AMZN (Price)", [
+                                { "date": new Date(2018, 0, 1, 8, 0, 0), "value": 16 }, 
+                                { "date": new Date(2018, 0, 1, 9, 0, 0), "value": 62 }, 
+                                { "date": new Date(2018, 0, 1, 10, 0, 0), "value": 55 }, 
+                                { "date": new Date(2018, 0, 1, 11, 0, 0), "value": 34 }, 
+                                { "date": new Date(2018, 0, 1, 12, 0, 0), "value": 29 }, 
+                                { "date": new Date(2018, 0, 1, 13, 0, 0), "value": 29 }, 
+                                { "date": new Date(2018, 0, 1, 14, 0, 0), "value": 28 }, 
+                                { "date": new Date(2018, 0, 1, 15, 0, 0), "value": 32 }, 
+                                { "date": new Date(2018, 0, 1, 16, 0, 0), "value": 30, "opacity": 1 }
+                            ], colors.getIndex(2));
+                            
+                            createColumn("AMZN (Turnover)", [
+                                { "date": new Date(2018, 0, 1, 8, 0, 0), "value": 50 }, 
+                                { "date": new Date(2018, 0, 1, 9, 0, 0), "value": 51 }, 
+                                { "date": new Date(2018, 0, 1, 10, 0, 0), "value": 62 }, 
+                                { "date": new Date(2018, 0, 1, 11, 0, 0), "value": 60 }, 
+                                { "date": new Date(2018, 0, 1, 12, 0, 0), "value": 25 }, 
+                                { "date": new Date(2018, 0, 1, 13, 0, 0), "value": 20 }, 
+                                { "date": new Date(2018, 0, 1, 14, 0, 0), "value": 70 }, 
+                                { "date": new Date(2018, 0, 1, 15, 0, 0), "value": 42 }, 
+                                { "date": new Date(2018, 0, 1, 16, 0, 0), "value": 33, "opacity": 1 }
+                            ], colors.getIndex(2));
+                            
+                            createPie([
+                                { "category": "Marketing", "value": 220 }, 
+                                { "category": "Research", "value": 200 }, 
+                                { "category": "Sales", "value": 150 }, 
+                                { "category": "HR", "value": 125 }
+                            ], colors.getIndex(2));
+                            
+                            // FB
+                            
+                            createLine("FB (Price)", [
+                                { "date": new Date(2018, 0, 1, 8, 0, 0), "value": 52 }, 
+                                { "date": new Date(2018, 0, 1, 9, 0, 0), "value": 55 }, 
+                                { "date": new Date(2018, 0, 1, 10, 0, 0), "value": 35 }, 
+                                { "date": new Date(2018, 0, 1, 11, 0, 0), "value": 34 }, 
+                                { "date": new Date(2018, 0, 1, 12, 0, 0), "value": 39 }, 
+                                { "date": new Date(2018, 0, 1, 13, 0, 0), "value": 42 }, 
+                                { "date": new Date(2018, 0, 1, 14, 0, 0), "value": 29 }, 
+                                { "date": new Date(2018, 0, 1, 15, 0, 0), "value": 22 }, 
+                                { "date": new Date(2018, 0, 1, 16, 0, 0), "value": 15, "opacity": 1 }
+                            ], colors.getIndex(3));
+                            
+                            createColumn("FB (Turnover)", [
+                                { "date": new Date(2018, 0, 1, 8, 0, 0), "value": 20 }, 
+                                { "date": new Date(2018, 0, 1, 9, 0, 0), "value": 20 }, 
+                                { "date": new Date(2018, 0, 1, 10, 0, 0), "value": 25 }, 
+                                { "date": new Date(2018, 0, 1, 11, 0, 0), "value": 26 }, 
+                                { "date": new Date(2018, 0, 1, 12, 0, 0), "value": 29 }, 
+                                { "date": new Date(2018, 0, 1, 13, 0, 0), "value": 27 }, 
+                                { "date": new Date(2018, 0, 1, 14, 0, 0), "value": 25 }, 
+                                { "date": new Date(2018, 0, 1, 15, 0, 0), "value": 32 }, 
+                                { "date": new Date(2018, 0, 1, 16, 0, 0), "value": 30, "opacity": 1 }
+                            ], colors.getIndex(3));
+                            
+                            createPie([
+                                { "category": "Marketing", "value": 120 }, 
+                                { "category": "Research", "value": 150 }, 
+                                { "category": "Sales", "value": 125 }, 
+                                { "category": "HR", "value": 250 }
+                            ], colors.getIndex(3));
+                            
+                            }); // end am4core.ready()
+                        </script>
+                    </div>
+                </div>
+                <div class="grafico2">
+                    <div class="ttl">
+                        <p>Gráfico 2</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,95 @@
+*{
+    font-family: 'Ubuntu', sans-serif;
+}
+body{
+    
+    background-color: #EFEFF5;
+}
+
+input, select, textarea{
+    border: 2px groove #EFEFF5;
+    border-radius: 4px 4px;  
+}
+
+input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -3px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -3px;
+    left: -1px;
+    position: relative;
+    background-color: #ffa500;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+input[type='checkbox'],input[type='radio'] {
+    visibility: hidden;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr 4fr;
+    grid-gap: 6em;
+    position: relative;
+    left: 7%;
+
+}
+
+#linha1, #linha2, #linha3{
+    margin-bottom: 20px;
+}
+
+
+
+
+/*Página servico*/
+#form-pessoa-fisica, #form-pessoa-juridica{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 20px;
+}    
+
+.salvar-servico{
+    /* position: relative;*/ 
+    background-color: #28A745;
+    border: none;
+    color: white;
+    width: 70px;
+    height: 30px;
+    border-radius: 4px;
+}
+
+.salvar-servico:hover{
+    transform: scale(1.2);
+    border-style: unset;
+}
+
+#tipo-pessoa{
+    margin-left: 120px;
+    margin-right: 100px;
+    margin-top: 40px;
+}
+
+#form-pessoa-juridica{
+    display: none;
+}
+
+
+
