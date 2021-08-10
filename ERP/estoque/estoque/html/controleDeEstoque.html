@@ -2,11 +2,11 @@
 <html lang="pt-br">
 
     <head>
-        <title>FreddoFrio - Transferencia </title>
+        <title>FreddoFrio - Controle de Estoque</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="estilo-listaV4.css">
+        <link rel="stylesheet" href="../css/estilo-controle-estoque.css">
         <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
         <script defer src="https://kit.fontawesome.com/3f3417947e.js"></script>
     </head>
@@ -21,7 +21,7 @@
             <div class="perfil">
 
                 <div class="logo">
-                    <img src="img/Logo.png" width="75px" height="75px">
+                    <img src="../../img/Logo.png" width="75px" height="75px">
                 </div>
 
                 <div class="usuario">
@@ -73,11 +73,11 @@
                         <span class="fas fa-caret-down segundo"></span>
                     </a>
                     <ul class="mostre-stock">
-                        <li><a href="#">Controle de Estoque</a></li>
-                        <li><a href="#">Cotação Online</a></li>
+                        <li><a href="controleDeEstoque.html">Controle de Estoque</a></li>
+                        <li><a href="cotacaoOnlineBusca.html">Cotação Online</a></li>
                         <li><a href="#">Compras</a></li>
-                        <li><a href="#">Transferências</a></li>
-                        <li><a href="#">Etiquetas</a></li>
+                        <li><a href="./transferencias.html">Transferências</a></li>
+                        <li><a href="etiquetas.html">Etiquetas</a></li>
                     </ul>
                 </li>
                 <li>
@@ -232,92 +232,82 @@
         
             <!-- CABEÇALHO DA PÁGINA -->
             <div id="cabecalho">
-                <h1><img src="Symbian/Diary-Editor.png" width="30px" height="30px">Transferencia</h1>
+                <h1><img src="/Symbian/Diary-Editor.png" width="30px" height="30px">Controle de Estoque</h1>
             </div>
             
             <!-- BUSCAR -->
             <div id="buscar">
                 <div class="cab-titulo">
-                    <h2> Pesquisar</h2>
+                    <h2><!--titulo da sessão--></h2>
                 </div>
 
                 <form action="">
                     <div class="flex">
                         <div>
-                            <label>Produto: </label>
-                            <select name="grupo" class="situ">
-                                <option value="#"> </option>/option>
-                                <option value="#">Eletrôniocos</option>
-                                <option value="#">Grande porte</option>
-                                <option value="#">outros</option>
-                            </select>
+                            <label>Id: </label>
+                            <input type="text" name="nome" class="id">
                         </div>
                         <div>
-                            <label>Orgiem: </label>
-                            <select name="grupo" class="situ">
-                                <option value="#"> </option>/option>
-                                <option value="#">Eletrôniocos</option>
-                                <option value="#">Grande porte</option>
-                                <option value="#">outros</option>
-                            </select>
+                            <label>Nome: </label>
+                            <input type="text" name="codigo" class="nome">
                         </div>
                         <div>
-                            <label>Destino: </label>
-                            <select name="grupo" class="situ">
-                                <option value="#"> </option>/option>
-                                <option value="#">Eletrôniocos</option>
-                                <option value="#">Grande porte</option>
-                                <option value="#">outros</option>
-                            </select>
+                            <label>Marca: </label>
+                            <input type="text" name="marca">
                         </div>
                         <div>
-                            <label>Data: </label>
-                            <input id="date" type="date" >
+                            <label>Modelo: </label>
+                            <input type="text" name="modelo">
                         </div>
                     </div>
                     <div class="flex">       
-                        <div style="margin-left: 35px;">
-                            
+                        <div style="margin-right: 8px;">
                             <label>Tipo: </label>
                             <select name="grupo" class="situ">
-                                <option value="#"> </option>/option>
+                                <option value="#">Peças</option>
                                 <option value="#">Eletrôniocos</option>
                                 <option value="#">Grande porte</option>
                                 <option value="#">outros</option>
                             </select>
                         </div>
                         
+                        <div>
+                            <label>Situação: </label>
+                            <select name="ativo" class="situ">
+                                <option value="todos"></option>
+                                <option value="sim">Ativo</option>
+                                <option value="nao">Inativo</option>
+                            </select>
+                        </div>
+                        <div style="margin-left: 12px;">
+                            <label>Estoque:</label>
+                            <select name="situacao" class="situ">
+                                <option value="independente">Independente</option>
+                                <option value="estoque-minimo">Somente com estoque minimo alcançado</option>
+                                <option value="estoque-maximo">Somente com estoque máximo alcançado</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label>Fornecedor: </label>
+                            <select name="fornecedor" class="situ" style="margin-right: 21px;">
+                                <option value="todos">Nenum resultado encontrado</option>
+                            </select>
+                        </div>
                         
-                        <div>
-                            <div style="margin-left: 40px;">    
-                                <label>Valor:</label>
-                                <input type="text" class="valor">
-                            </div>
-                        </div>
-                        <div>
-                            <div style="margin-right: 100px;">    
-                                <label>Quantidade:</label>
-                                <input type="text" class="qtnd">
-                            </div>
-                        </div>
-                        <div id="btn-buscar" style="margin-right: 30px;">
-                            <button>Buscar</button>
-                        </div>
                     </div>
                     
-                    
+                    <div id="btn-buscar">
+                        <button>Buscar</button>
+                    </div>
                 </form>
 
 
             </div>
             
             <div id="acoes">
-                <div id="btn-nova-transferencia">
-                    <button><a href="nova-transferencia.html"><img src="img/mais.png" width="30px" height="30px" alt=""></a></button>
-                </div>
-                <button><img src="Symbian/App-Blue.png" height="30px" width="30px" ></button>
-                <button><img src="Symbian/App-Download-2.png" height="30px" width="30px" title="Importar"></button>
-                <button><img src="Symbian/Upload.png" height="30px" width="30px" title="Exportar"></button>
+                <button><img src="/Symbian/App-Blue.png" height="30px" width="30px" ></button>
+                <button><img src="/Symbian/App-Download-2.png" height="30px" width="30px" title="Importar"></button>
+                <button><img src="/Symbian/Upload.png" height="30px" width="30px" title="Exportar"></button>
             </div>
 
             <!--------------------------------------------------------------------------------->
@@ -345,13 +335,13 @@
                             <td></td>
                             <td class="btn">
                                 <!-- VISUALIZAR -->
-                                <button><img src="Symbian/File-Manager.png" height="25px" width="25px"></button></a>
+                                <button><img src="/Symbian/File-Manager.png" height="25px" width="25px"></button></a>
                                 
                                 <!-- EDITAR -->
-                                <button><img src="Symbian/Point-Editor.png" height="25px" width="25px"></button>
+                                <button><img src="/Symbian/Point-Editor.png" height="25px" width="25px"></button>
                                 
                                 <!-- DELETAR -->
-                                <button><img src="Symbian/App-Blue.png" height="25px" width="25px"></button>
+                                <button><img src="/Symbian/App-Blue.png" height="25px" width="25px"></button>
                             </td>
                         </tr>
                         <tr>
@@ -362,13 +352,13 @@
                             <td></td>
                             <td class="btn">
                                 <!-- VIZUALIZAR -->
-                                <button><img src="Symbian/File-Manager.png" height="25px" width="25px" title="Vizualizar"></button> 
+                                <button><img src="/Symbian/File-Manager.png" height="25px" width="25px" title="Vizualizar"></button> 
 
                                 <!-- EDITAR -->
-                                <button><img src="Symbian/Point-Editor.png" height="25px" width="25px" title="Editar"></button> 
+                                <button><img src="/Symbian/Point-Editor.png" height="25px" width="25px" title="Editar"></button> 
 
                                 <!-- DELETAR -->
-                                <button><img src="Symbian/App-Blue.png" height="25px" width="25px" title="Deletar"></button>
+                                <button><img src="/Symbian/App-Blue.png" height="25px" width="25px" title="Deletar"></button>
                             </td>
                         </tr>
                         <tr>
@@ -379,13 +369,13 @@
                             <td></td>
                             <td class="btn">
                                 <!-- VIZUALIZAR -->
-                                <button><img src="Symbian/File-Manager.png" height="25px" width="25px" title="Vizualizar"></button> 
+                                <button><img src="/Symbian/File-Manager.png" height="25px" width="25px" title="Vizualizar"></button> 
                                 
                                 <!-- EDITAR -->
-                                <button><img src="Symbian/Point-Editor.png" height="25px" width="25px" title="Editar"></button> 
+                                <button><img src="/Symbian/Point-Editor.png" height="25px" width="25px" title="Editar"></button> 
 
                                 <!-- DELETAR -->
-                                <button><img src="Symbian/App-Blue.png" height="25px" width="25px" title="Deletar"></button>
+                                <button><img src="/Symbian/App-Blue.png" height="25px" width="25px" title="Deletar"></button>
                             </td>
                         </tr>
                         <tr>
@@ -396,13 +386,13 @@
                             <td></td>
                             <td>
                                 <!-- VIZUALIZAR -->
-                                <button><img src="Symbian/File-Manager.png" height="25px" width="25px" title="Vizualizar"></button>
+                                <button><img src="/Symbian/File-Manager.png" height="25px" width="25px" title="Vizualizar"></button>
                                 
                                 <!-- EDITAR -->
-                                <button><img src="Symbian/Point-Editor.png" height="25px" width="25px" title="Editar"></button>
+                                <button><img src="/Symbian/Point-Editor.png" height="25px" width="25px" title="Editar"></button>
                                 
                                 <!-- DELETAR -->
-                                <button><img src="Symbian/App-Blue.png" height="25px" width="25px" title="Deletar"></button>
+                                <button><img src="/Symbian/App-Blue.png" height="25px" width="25px" title="Deletar"></button>
                             </td>
                         </tr>
                         <tr>
@@ -413,13 +403,13 @@
                             <td></td>
                             <td>
                                 <!-- VIZUALIZAR -->
-                                <button><img src="Symbian/File-Manager.png" height="25px" width="25px" title="Vizualizar"></button>
+                                <button><img src="/Symbian/File-Manager.png" height="25px" width="25px" title="Vizualizar"></button>
 
                                 <!-- EDITAR -->
-                                <button><img src="Symbian/Point-Editor.png" height="25px" width="25px" title="Editar"></button> 
+                                <button><img src="/Symbian/Point-Editor.png" height="25px" width="25px" title="Editar"></button> 
 
                                 <!-- DELETAR -->
-                                <button><img src="Symbian/App-Blue.png" height="25px" width="25px"title="Deletar"></button>
+                                <button><img src="/Symbian/App-Blue.png" height="25px" width="25px"title="Deletar"></button>
                             </td>
                         </tr>
                         <tr>
@@ -430,13 +420,13 @@
                             <td></td>
                             <td>
                                 <!-- VIZUALIZAR -->
-                                <button><img src="Symbian/File-Manager.png" height="25px" width="25px" title="Vizualizar"></button> 
+                                <button><img src="/Symbian/File-Manager.png" height="25px" width="25px" title="Vizualizar"></button> 
 
                                 <!-- EDITAR -->
-                                <button><img src="Symbian/Point-Editor.png" height="25px" width="25px" title="Editar"></button>
+                                <button><img src="/Symbian/Point-Editor.png" height="25px" width="25px" title="Editar"></button>
 
                                 <!-- DELETAR -->
-                                <button><img src="Symbian/App-Blue.png" height="25px" width="25px" title="Deletar"></button>
+                                <button><img src="/Symbian/App-Blue.png" height="25px" width="25px" title="Deletar"></button>
                             </td>
                         </tr>
                     </tbody>

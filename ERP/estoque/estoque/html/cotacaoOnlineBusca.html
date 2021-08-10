@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
+
     <head>
-        <title>FreddoFrio - Nova Transferencia</title>
+        <title>FreddoFrio - Listar Produtos</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="estilo.css">
+        <link rel="stylesheet" href="../css/estilo-cotacao-online.css">
         <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
         <script defer src="https://kit.fontawesome.com/3f3417947e.js"></script>
     </head>
@@ -14,11 +15,13 @@
         <!---------------------------------------------------------------------->
         <!--                          MENU LATERAL                            -->
         <!---------------------------------------------------------------------->
+
         <nav class="sidebar">
+
             <div class="perfil">
 
                 <div class="logo">
-                     <img src="img/Logo.png" width="75px" height="75px">
+                    <img src="/img/Logo.png" width="75px" height="75px">
                 </div>
 
                 <div class="usuario">
@@ -42,8 +45,10 @@
             <!---------------------------------------------------------------------->
             <div class="area-de-pesquisa">
                 <form class="pesquisa">
+
                     <input type="search" id="barra" placeholder="Buscar">
                     <i class="fas fa-search"></i>
+
                 </form>
             </div>
 
@@ -68,11 +73,11 @@
                         <span class="fas fa-caret-down segundo"></span>
                     </a>
                     <ul class="mostre-stock">
-                        <li><a href="#">Controle de Estoque</a></li>
-                        <li><a href="#">Cotação Online</a></li>
+                        <li><a href="controleDeEstoque.html">Controle de Estoque</a></li>
+                        <li><a href="cotacaoOnlineBusca.html">Cotação Online</a></li>
                         <li><a href="#">Compras</a></li>
-                        <li><a href="#">Transferências</a></li>
-                        <li><a href="#">Etiquetas</a></li>
+                        <li><a href="transferencias.html">Transferências</a></li>
+                        <li><a href="etiquetas.html">Etiquetas</a></li>
                     </ul>
                 </li>
                 <li>
@@ -219,77 +224,186 @@
             });
         </script>
 
-        <!----------------------------------------------------------------------
-        -------------------------- PÁGINA -------------------------------------- 
+        <!-----------------------------------------------------------------------
+        ---                           PÁGINA                                  ---
         ------------------------------------------------------------------------>
+        
         <div id="pagina">
+        
             <!-- CABEÇALHO DA PÁGINA -->
             <div id="cabecalho">
-                <h1><img src="Symbian/Diary-Editor.png" width="30px" height="30px">Nova Transferencia</h1>
+                <h1><img src="/Symbian/Diary-Editor.png" width="30px" height="30px">Lista de Cotação</h1>
             </div>
-
-            <div class="containers" id="pesquisa">
-                <a href="transferencias.html"><button>Voltar</button></a>
-            </div>
-
-            <!-- CONTAINER 1 -->
-            <form action="">
-                <div class="containers" id="container-1">
-                    <div class="cab-titulo">
-                        <h2></h2>
-                    </div>
-
-                    <div class="flex">
-                        <div>
-                            <label for="">Loja de Origem</label>
-                            <select name="" class="op">
-                                <option value="">Selecione</option>
-                                <option value=""></option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label for="">Loja de destino</label>
-                            <select name="" class="op">
-                                <option value="">Selecione</option>
-                                <option value=""></option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label for="">Valor Total</label>
-                            <input type="text" name="" id="">
-                        </div>
-                             
-                    </div>
+            
+            <!-- BUSCAR -->
+            <div id="buscar">
+                <div class="cab-titulo">
+                    <h2><!--titulo da sessão--></h2>
                 </div>
 
-                <!-- CONTAINER 2 -->
-                <div class="containers" id="container-2">
-                    <div class="cab-titulo">
-                        <h2>Observações</h2>
-                    </div>
 
-                    <div>
-                        <fieldset class="flex">
-                            <div>
-                                <label for=""></label>
-                                <textarea name="descricao" cols="195" rows="10"></textarea>
+                
+
+                <form action="">
+                    <div id="buscar">
+                        <div id="flex">
+                            <div>                       
+                                <div>
+                                    <label>Fornecedor</label>
+                                    <input id="inputBuscar" type="text" name="nome" class="situ">
+                                </div>
+                                <div>
+                                    <label>À partir de</label>
+                                    <input id="inputBuscar" type="date" name="nome" class="situ">
+                                </div>
+                            
+                                <div>
+                                    <label>Até</label>
+                                    <input id="inputBuscar" type="date" name="nome" class="situ">
+                                </div>
+                                <div id="btn-buscar">
+                                    <button>Buscar</button>
+                                </div>
                             </div>
-                        </fieldset>
-                    </div>
-                </div>
+                        </div>
+                    </div> 
+                        <div id="btn-buscar">
+                            <div>
+                                <button>Adicionar</button>
+                            </div>
+                            
+                            <div>
+                                <label>Ações</label>
+                                <select name="grupo" aria-placeholder="a">
+                                    <option value="#"> Excluir</option>
+                                    <option value="#">Exportar</option>
+                                </select>
+                            </div>
+                        </div>
+                                          
+                </div>                         
+            </form> 
+        
+            <!--------------------------------------------------------------------------------->
+            <!---------------------                  TABELA                 ------------------->
+            <!--------------------------------------------------------------------------------->
+            <div id="produtos">
+                <table id="tabela">
+                    <caption></caption>
+                    <thead>
+                        <tr class="linhas">
+                            <th>N°</th> 
+                            <th>Data</th>
+                            <th>Prazo de entrega</th>
+                            <th>Fornecedores</th>
+                            <th>Situação</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Number</td>
+                            <td>--/--/----</td>
+                            <td>--/--/----</td>
+                            <td>Nome do Fornecedor</td>
+                            <td>Não enviado/Enviado</td>
+                            <td class="btn">
+                                <!-- VISUALIZAR -->
+                                <a href="https://wipsites.com.br" target="_blank"><button><img src="/Symbian/File-Manager.png" height="25px" width="25px"></button></a>
+                                
+                                <!-- EDITAR -->
+                                <button><img src="/Symbian/Point-Editor.png" height="25px" width="25px"></button>
+                                
+                                <!-- DELETAR -->
+                                <button><img src="/Symbian/App-Blue.png" height="25px" width="25px"></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Number</td>
+                            <td>--/--/----</td>
+                            <td>--/--/----</td>
+                            <td>Nome do Fornecedor</td>
+                            <td>Não enviado/Enviado</td>
+                            <td class="btn">
+                                <!-- VIZUALIZAR -->
+                                <button><img src="/Symbian/File-Manager.png" height="25px" width="25px"></button> 
 
-                <!-- BOTÃO -->
-                <div class="flex">
-                    <div id="div-cadastrar">
-                        <button>Cadastrar</button>
-                    </div>
-                    <div id="div-cancelar">
-                        <button>Cancelar</button>
-                    </div>
-                </div>  
-            </form>
+                                <!-- EDITAR -->
+                                <button><img src="/Symbian/Point-Editor.png" height="25px" width="25px"></button> 
+
+                                <!-- DELETAR -->
+                                <button><img src="/Symbian/App-Blue.png" height="25px" width="25px"></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Number</td>
+                            <td>--/--/----</td>
+                            <td>--/--/----</td>
+                            <td>Nome do Fornecedor</td>
+                            <td>Não enviado/Enviado</td>
+                            <td class="btn">
+                                <!-- VIZUALIZAR -->
+                                <button><img src="/Symbian/File-Manager.png" height="25px" width="25px"></button> 
+                                
+                                <!-- EDITAR -->
+                                <button><img src="/Symbian/Point-Editor.png" height="25px" width="25px"></button> 
+
+                                <!-- DELETAR -->
+                                <button><img src="/Symbian/App-Blue.png" height="25px" width="25px"></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Number</td>
+                            <td>--/--/----</td>
+                            <td>--/--/----</td>
+                            <td>Nome do Fornecedor</td>
+                            <td>Não enviado/Enviado</td>
+                            <td>
+                                <!-- VIZUALIZAR -->
+                                <button><img src="/Symbian/File-Manager.png" height="25px" width="25px"></button>
+                                
+                                <!-- EDITAR -->
+                                <button><img src="/Symbian/Point-Editor.png" height="25px" width="25px"></button>
+                                
+                                <!-- DELETAR -->
+                                <button><img src="/Symbian/App-Blue.png" height="25px" width="25px"></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Number</td>
+                            <td>--/--/----</td>
+                            <td>--/--/----</td>
+                            <td>Nome do Fornecedor</td>
+                            <td>Não enviado/Enviado</td>
+                            <td>
+                                <!-- VIZUALIZAR -->
+                                <button><img src="/Symbian/File-Manager.png" height="25px" width="25px"></button>
+
+                                <!-- EDITAR -->
+                                <button><img src="/Symbian/Point-Editor.png" height="25px" width="25px"></button> 
+
+                                <!-- DELETAR -->
+                                <button><img src="/Symbian/App-Blue.png" height="25px" width="25px"></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Number</td>
+                            <td>--/--/----</td>
+                            <td>--/--/----</td>
+                            <td>Nome do Fornecedor</td>
+                            <td>Não enviado/Enviado</td>
+                            <td>
+                                <!-- VIZUALIZAR -->
+                                <button><img src="/Symbian/File-Manager.png" height="25px" width="25px"></button> 
+
+                                <!-- EDITAR -->
+                                <button><img src="/Symbian/Point-Editor.png" height="25px" width="25px"></button>
+
+                                <!-- DELETAR -->
+                                <button><img src="/Symbian/App-Blue.png" height="25px" width="25px"></button>
+                            </td>
+                        </tr>
+                   
         </div>
     </body>
 </html>

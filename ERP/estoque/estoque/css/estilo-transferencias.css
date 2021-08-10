@@ -1,60 +1,60 @@
-*{
-    margin: 0;
-    padding: 0;
-    user-select: none;
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
-body{
-    display: flex;
-    background-color: darkblue;
-}
-
 @media screen and (min-device-width : 1200px) {
-    /* ======================================================================================
-    ======================= MENU LATERAL ====================================================
-    ========================================================================================= */
+    *{
+        margin: 0;
+        padding: 0;
+        user-select: none;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+    body{
+        display: flex;
+        background-color: darkblue;
+    }
+    
+    /* ======================================================================================= 
+    ====================================== MENU LATERAL ======================================
+    ========================================================================================== */
     .sidebar{
         position: absolute;
         width: 220px;
         height: 100%;
         left: 0px;
     }
-
-    /* ===============================================================================================
-    =============================== CAMPO DE USUARIO =================================================
-    ================================================================================================== */
+    
+    /* ======================================================================================= 
+    ===============================  CAMPO DE USUARIO  ======================================= 
+    ========================================================================================== */
     .perfil{
         display: flex;
         background-color: darkblue;
     }
-    .perfil .logo img{
+    .logo img{
         border-radius: 50%;
         padding: 5px;
     }
-    .perfil .usuario{
+    .usuario{
         padding: 5px;
         background-color: darkblue;
         border: none;
     }
-    .sidebar .usuario h1{
+    .usuario h1{
         padding-left: 10px;
         padding-top: 10px;
         color: white;
         text-shadow: 3px 3px 5px black;
         font-size: 20px;
     }
-    .sidebar .usuario a{
+    .usuario a{
         text-decoration: none;
         font-size: 15px;
         color: darkgrey;
         text-shadow: 3px 3px 5px black;
         padding-left: 10px;
     }
-
-    /* ================================================================================================
-    ========================================= ICONES ==================================================
-    =================================================================================================== */
+    
+    /* ============================================================================================== 
+    ====================================   ICONES   =================================================
+    ================================================================================================= */
     .icones{
         display: flex;
         justify-content: space-around;
@@ -63,12 +63,14 @@ body{
         text-shadow: 3px 3px 5px black;
         margin-top: 20px;
     }
-
-    /* ================================================================================================== ====================================== CAMPO DE BUSCA =============================================== ===================================================================================================== */
-    .barra-de-pesquisa .pesquisa{
+    
+    /* ================================================================================================== 
+    ====================================== CAMPO DE BUSCA ===============================================
+    ===================================================================================================== */
+    .pesquisa{
         margin-left: 10px;
     }
-    .area-de-pesquisa .pesquisa{
+    .pesquisa{
         border: 1px solid white;
         height: 35px;
         margin: 30px 15px;
@@ -89,10 +91,10 @@ body{
         color: white;
         font-size: 15px;
     }
-
-    /* ===========================================================================================
-    ============================= SUB-MENUS ======================================================
-    ============================================================================================== */
+    
+    /* ==============================================================================================
+    =======================================   SUB-MENUS   ===========================================
+    ================================================================================================= */
     nav ul{
         background-color: darkblue;
         height: 100%;
@@ -194,11 +196,156 @@ body{
         text-shadow: 3px 3px 5px black;
         font-size: x-large;
     }
-
+    
     /* =========================================================================================================== 
-    ======================================================== PÁGINA ============================================== 
+    ==================================== PÁGINA TRANSERENCIA============================================== 
     ============================================================================================================== */
-    #pagina{
+    #pagina-visualizacao{
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        margin: 10px 10px 10px 220px;
+        border-radius: 30px;
+    }
+    
+    /* ========================================================================================================== 
+    ================================================= CABEÇALHO ================================================= 
+    ============================================================================================================= */
+    #cabecalho{
+        height: 60px;
+        background-color: rgb(159, 187, 233);
+        border-radius: 30px 30px 0px 0px;
+        border: 5px double #e6e6e6;
+        display: flex;
+    }
+    #cabecalho h1{
+        margin: 10px 10px 0px 10px;
+        padding-bottom: 0px;
+        color: white;
+        font-size: 25px;
+        text-shadow: 3px 3px 5px darkblue;
+    }
+    
+    /* ===================================================================================================               
+    ============================================ CONTAINER BUSCAR ========================================
+    ====================================================================================================== */
+    #buscar{
+        border: 2px solid darkblue;
+        margin: 10px 10px;
+        border-radius: 10px;
+        background-color: rgb(159, 187, 233);
+    }
+    .cab-titulo{
+        height: 30px;
+        padding: 5px;
+        display: flex;
+        background-color: darkblue;
+        color: white;
+        font-size: 13px;
+        border-radius: 5px 5px 0px 0px;
+        text-shadow: 3px 3px 5px black;
+    }
+    .flex{
+        padding: 5px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .situ{
+        width: 160px;
+        font-size: 12px;
+    }
+    #pagina-visualizacao #buscar #btn-buscar{
+        display: flex;
+        justify-content: center;
+    }
+    
+    #buscar input{
+        height: 30px;
+        border: 1px solid darkblue;
+        border-radius: 5px;
+        margin: 3px 10px 3px 0px;
+    }
+    #buscar select{
+        height: 30px;
+        border: 1px solid darkblue;
+        border-radius: 5px;
+        margin: 3px 10px 3px 0px;
+    }
+    #buscar button{
+        height: 30px;
+        width: 100px;
+        background-color: darkblue;
+        color: white;
+        margin-bottom: 5px;
+    }
+    .valor, .qtnd{
+        width: 160px;
+    }
+    
+    /* =================================================================================================     
+    ==============================================  AÇÕES ==============================================            
+    ==================================================================================================== */
+    #acoes{
+        margin: 10px 0px;
+        padding: 5px;
+        display: flex;
+        justify-content: flex-end;
+        background-color: rgb(159, 187, 233);
+    }
+    #acoes button{
+        margin: 5px;
+        padding: 5px;
+        border-radius: 5px;
+        color: #e6e6e6;
+        text-shadow: 3px 3px 5px #1e1e1e;
+        background-color: rgb(159, 187, 233);
+    }
+    
+    /*================================================================================================= 
+    ========================================  TABELA   ================================================ 
+    ===================================================================================================*/
+    #transferencia{
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: center;
+    }
+    table, caption{
+        height: 100%;
+        width: 100%;
+        background-color: rgb(159, 187, 233);
+        color: white;
+    }
+    th, td{
+        border: 2px solid #e6e6e6;
+        padding: 5px;
+    }
+    thead{
+        background-color: darkblue;
+        
+    }
+    #transferencia table button{
+        margin: 5px 10px;
+        background-color: rgb(159, 187, 233);
+    }
+    #pagina-visualizacao #btn-prox {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    #pagina-visualizacao #btn-prox button{
+        height: 30px;
+        width: 100px;
+        background-color: darkblue;
+        color: white;
+        margin-bottom: 5px;
+    }
+    
+/* =========================================================================================================== 
+    ==================================== PÁGINA NOVA TRANSFERENCIA============================================== 
+    ============================================================================================================== */
+    #pagina-formulario{
+        display: none;
         background-color: white;
         height: 100%;
         width: 100%;
@@ -208,21 +355,21 @@ body{
     /* ========================================================================================================== 
     ================================================= CABEÇALHO =================================================
     ============================================================================================================= */
-    #pagina #cabecalho{
+    #pagina-formulario #cabecalho{
         height: 60px;
         background-color: rgb(159, 187, 233);
         border-radius: 30px 30px 0px 0px;
         border: 5px double #e6e6e6;
         display: flex;
     }
-    #pagina #cabecalho h1{
+    #pagina-formulario #cabecalho h1{
         margin: 10px 10px 0px 10px;
         padding-bottom: 0px;
         color: white;
         font-size: 25px;
         text-shadow: 3px 3px 5px darkblue;
     }
-    #pagina #pesquisa button{
+    #pagina-formulario #pesquisa button{
         margin: 5px;
         padding: 5px;
         color: #e6e6e6;
@@ -235,7 +382,7 @@ body{
     /* ============================================================================================================= 
     ================================================ TITULOS ======================================================= 
     ============================================================================================================== */
-    #pagina .cab-titulo{
+    #pagina-formulario .cab-titulo{
         height: 30px;
         padding: 5px;
         display: flex;
@@ -245,29 +392,29 @@ body{
         border-radius: 5px 5px 0px 0px;
         text-shadow: 3px 3px 5px black;
     }
-    #pagina .cab-titulo h1{
+    #pagina-formulario .cab-titulo h1{
         margin-right: 770px;
     }
 
     /* ======================================================================================================== 
     ========================================== CONTAINERS ===================================================== 
     =========================================================================================================== */
-    #pagina .containers{
+    #pagina-formulario .containers{
         border: 2px solid darkblue;
         margin: 10px 10px;
         border-radius: 10px;
         background-color: rgb(159, 187, 233);
     }
-    #pagina .containers .flex{
+    #pagina-formulario .containers .flex1{
         display: flex;
         justify-content: space-around;
         flex-flow: wrap;
     }
-    #pagina #container-5 input[type="file"]{
+    #pagina-formulario #container-5 input[type="file"]{
         width: 100%;
         margin: 10px;
     }
-    #pagina #div-cadastrar #div-cancelar{
+    #pagina-formulario #div-cadastrar #div-cancelar{
         display: flex;
         justify-content: space-around;
     }
@@ -275,19 +422,19 @@ body{
     /* ========================================================================================================== 
     ================================================== INPUTS =================================================== 
     ============================================================================================================= */
-    #pagina input{
+    #pagina-formulario input{
         height: 30px;
         border: 1px solid darkblue;
         border-radius: 5px;
         margin: 3px 10px 3px 0px;
     }
-    #pagina select{
+    #pagina-formulario select{
         height: 30px;
         border: 1px solid darkblue;
         border-radius: 5px;
         margin: 3px 10px 3px 0px;
     }
-    #pagina #div-cadastrar button{
+    #pagina-formulario #div-cadastrar button{
         height: 30px;
         width: 100px;
         background-color: darkblue;
@@ -302,10 +449,11 @@ body{
         color: white;
         margin-bottom: 5px;
     }
-    .flex{
+    .flex1{
         padding: 5px;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
     }
 }
+

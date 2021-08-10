@@ -2,11 +2,11 @@
 <html lang="pt-br">
 
     <head>
-        <title>FreddoFrio - Controle de Estoque</title>
+        <title>FreddoFrio - Etiquetas</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="estilo-listaV4.css">
+        <link rel="stylesheet" href="/estoque/css/estilo-etiquetas.css">
         <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
         <script defer src="https://kit.fontawesome.com/3f3417947e.js"></script>
     </head>
@@ -21,7 +21,7 @@
             <div class="perfil">
 
                 <div class="logo">
-                    <img src="img/Logo.png" width="75px" height="75px">
+                    <img src="../../img/Logo.png" width="75px" height="75px">
                 </div>
 
                 <div class="usuario">
@@ -73,11 +73,11 @@
                         <span class="fas fa-caret-down segundo"></span>
                     </a>
                     <ul class="mostre-stock">
-                        <li><a href="#">Controle de Estoque</a></li>
-                        <li><a href="#">Cotação Online</a></li>
+                        <li><a href="controleDeEstoque.html">Controle de Estoque</a></li>
+                        <li><a href="cotacaoOnlineBusca.html">Cotação Online</a></li>
                         <li><a href="#">Compras</a></li>
-                        <li><a href="#">Transferências</a></li>
-                        <li><a href="#">Etiquetas</a></li>
+                        <li><a href="transferencias.html">Transferências</a></li>
+                        <li><a href="etiquetas.html">Etiquetas</a></li>
                     </ul>
                 </li>
                 <li>
@@ -228,214 +228,310 @@
         ---                           PÁGINA                                  ---
         ------------------------------------------------------------------------>
         
-        <div id="pagina">
+        <div id="pagina-visualizacao">
         
             <!-- CABEÇALHO DA PÁGINA -->
             <div id="cabecalho">
-                <h1><img src="Symbian/Diary-Editor.png" width="30px" height="30px">Controle de Estoque</h1>
+                <h1><img src="../../Symbian/Clipboard-Check-2.png" width="30px" height="30px">ETIQUETAS</h1>
             </div>
             
             <!-- BUSCAR -->
             <div id="buscar">
                 <div class="cab-titulo">
-                    <h2><!--titulo da sessão--></h2>
+                    <h2>Pesquisar</h2>
+                    
                 </div>
-
-                <form action="">
-                    <div class="flex">
-                        <div>
-                            <label>Id: </label>
-                            <input type="text" name="nome" class="id">
+                <div>
+                    <div id="flex">
+                        <div class="research0">
+                            <input type="text" name="modelo" placeholder="Busca">
+                            <i class="fas fa-search"></i>
                         </div>
-                        <div>
-                            <label>Nome: </label>
-                            <input type="text" name="codigo" class="nome">
-                        </div>
-                        <div>
-                            <label>Marca: </label>
-                            <input type="text" name="marca">
-                        </div>
-                        <div>
-                            <label>Modelo: </label>
-                            <input type="text" name="modelo">
-                        </div>
-                    </div>
-                    <div class="flex">       
-                        <div style="margin-right: 8px;">
-                            <label>Tipo: </label>
-                            <select name="grupo" class="situ">
-                                <option value="#">Peças</option>
-                                <option value="#">Eletrôniocos</option>
-                                <option value="#">Grande porte</option>
-                                <option value="#">outros</option>
-                            </select>
-                        </div>
-                        
-                        <div>
-                            <label>Situação: </label>
-                            <select name="ativo" class="situ">
-                                <option value="todos"></option>
-                                <option value="sim">Ativo</option>
-                                <option value="nao">Inativo</option>
-                            </select>
-                        </div>
-                        <div style="margin-left: 12px;">
-                            <label>Estoque:</label>
-                            <select name="situacao" class="situ">
-                                <option value="independente">Independente</option>
-                                <option value="estoque-minimo">Somente com estoque minimo alcançado</option>
-                                <option value="estoque-maximo">Somente com estoque máximo alcançado</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label>Fornecedor: </label>
-                            <select name="fornecedor" class="situ" style="margin-right: 21px;">
-                                <option value="todos">Nenum resultado encontrado</option>
-                            </select>
-                        </div>
-                        
                     </div>
                     
-                    <div id="btn-buscar">
-                        <button>Buscar</button>
+                    <div id="two-button">
+                        <div id="btn-add">
+                            <button onclick="formulario()">Adicionar Etiqueta</button>
+                        </div>
+                        <div id="btn-imp">
+                            <button>imprimir</button>
+                        </div>
                     </div>
-                </form>
+                </div>
 
 
             </div>
             
             <div id="acoes">
-                <button><img src="Symbian/App-Blue.png" height="30px" width="30px" ></button>
-                <button><img src="Symbian/App-Download-2.png" height="30px" width="30px" title="Importar"></button>
-                <button><img src="Symbian/Upload.png" height="30px" width="30px" title="Exportar"></button>
+                <p>VOCÊ PODE CRIAR  ETIQUITAS E IMPRIMIR</p>
             </div>
 
             <!--------------------------------------------------------------------------------->
             <!---------------------                  TABELA                 ------------------->
             <!--------------------------------------------------------------------------------->
-            <div id="produtos">
+            <div id="etiqueta">
                 <table id="tabela">
                     <caption></caption>
                     <thead>
                         <tr class="linhas">
-                            <th>Id</th> 
-                            <th>nome</th>
-                            <th>marca</th>
-                            <th>Modelo</th>
-                            <th>Fornecedor</th>
-                            <th>Configurações</th>
+                            <th><div class="scales0"><input type="checkbox"></div></th>
+                            <th>NOME DA ETIQUETA</th> 
+                            <th>TAMANHO DA PÁGINA</th>
+                            <th>CADASTRADO EM:</th>
+                            <th>ACÕES</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td></td>
-                            <td></td>
+                            <th><div class="scales0"><input type="checkbox"></div></th>
                             <td></td>
                             <td></td>
                             <td></td>
                             <td class="btn">
                                 <!-- VISUALIZAR -->
-                                <button><img src="Symbian/File-Manager.png" height="25px" width="25px"></button></a>
+                                <a href="https://wipsites.com.br" target="_blank"><button><img src="/Symbian/File-Manager.png" height="25px" width="25px"></button></a>
                                 
                                 <!-- EDITAR -->
-                                <button><img src="Symbian/Point-Editor.png" height="25px" width="25px"></button>
+                                <button><img src="/Symbian/Point-Editor.png" height="25px" width="25px"></button>
                                 
                                 <!-- DELETAR -->
-                                <button><img src="Symbian/App-Blue.png" height="25px" width="25px"></button>
+                                <button><img src="/Symbian/App-Blue.png" height="25px" width="25px"></button>
                             </td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td></td>
+                            <th><div class="scales0"><input type="checkbox"></div></th>
                             <td></td>
                             <td></td>
                             <td></td>
                             <td class="btn">
                                 <!-- VIZUALIZAR -->
-                                <button><img src="Symbian/File-Manager.png" height="25px" width="25px" title="Vizualizar"></button> 
+                                <button><img src="/Symbian/File-Manager.png" height="25px" width="25px"></button> 
 
                                 <!-- EDITAR -->
-                                <button><img src="Symbian/Point-Editor.png" height="25px" width="25px" title="Editar"></button> 
+                                <button><img src="/Symbian/Point-Editor.png" height="25px" width="25px"></button> 
 
                                 <!-- DELETAR -->
-                                <button><img src="Symbian/App-Blue.png" height="25px" width="25px" title="Deletar"></button>
+                                <button><img src="/Symbian/App-Blue.png" height="25px" width="25px"></button>
                             </td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td></td>
+                            <th><div class="scales0"><input type="checkbox"></div></th>
                             <td></td>
                             <td></td>
                             <td></td>
                             <td class="btn">
                                 <!-- VIZUALIZAR -->
-                                <button><img src="Symbian/File-Manager.png" height="25px" width="25px" title="Vizualizar"></button> 
+                                <button><img src="/Symbian/File-Manager.png" height="25px" width="25px"></button> 
                                 
                                 <!-- EDITAR -->
-                                <button><img src="Symbian/Point-Editor.png" height="25px" width="25px" title="Editar"></button> 
+                                <button><img src="/Symbian/Point-Editor.png" height="25px" width="25px"></button> 
 
                                 <!-- DELETAR -->
-                                <button><img src="Symbian/App-Blue.png" height="25px" width="25px" title="Deletar"></button>
+                                <button><img src="/Symbian/App-Blue.png" height="25px" width="25px"></button>
                             </td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td></td>
+                            <th><div class="scales0"><input type="checkbox"></div></th>
                             <td></td>
                             <td></td>
                             <td></td>
                             <td>
                                 <!-- VIZUALIZAR -->
-                                <button><img src="Symbian/File-Manager.png" height="25px" width="25px" title="Vizualizar"></button>
+                                <button><img src="/Symbian/File-Manager.png" height="25px" width="25px"></button>
                                 
                                 <!-- EDITAR -->
-                                <button><img src="Symbian/Point-Editor.png" height="25px" width="25px" title="Editar"></button>
+                                <button><img src="/Symbian/Point-Editor.png" height="25px" width="25px"></button>
                                 
                                 <!-- DELETAR -->
-                                <button><img src="Symbian/App-Blue.png" height="25px" width="25px" title="Deletar"></button>
+                                <button><img src="/Symbian/App-Blue.png" height="25px" width="25px"></button>
                             </td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td></td>
+                            <th><div class="scales0"><input type="checkbox"></div></th>
                             <td></td>
                             <td></td>
                             <td></td>
                             <td>
                                 <!-- VIZUALIZAR -->
-                                <button><img src="Symbian/File-Manager.png" height="25px" width="25px" title="Vizualizar"></button>
+                                <button><img src="/Symbian/File-Manager.png" height="25px" width="25px"></button>
 
                                 <!-- EDITAR -->
-                                <button><img src="Symbian/Point-Editor.png" height="25px" width="25px" title="Editar"></button> 
+                                <button><img src="/Symbian/Point-Editor.png" height="25px" width="25px"></button> 
 
                                 <!-- DELETAR -->
-                                <button><img src="Symbian/App-Blue.png" height="25px" width="25px"title="Deletar"></button>
+                                <button><img src="/Symbian/App-Blue.png" height="25px" width="25px"></button>
                             </td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td></td>
+                            <th><div class="scales0"><input type="checkbox"></div></th>
                             <td></td>
                             <td></td>
                             <td></td>
                             <td>
                                 <!-- VIZUALIZAR -->
-                                <button><img src="Symbian/File-Manager.png" height="25px" width="25px" title="Vizualizar"></button> 
+                                <button><img src="../../Symbian/File-Manager.png" height="25px" width="25px"></button> 
 
                                 <!-- EDITAR -->
-                                <button><img src="Symbian/Point-Editor.png" height="25px" width="25px" title="Editar"></button>
+                                <button><img src="../../Symbian/Point-Editor.png" height="25px" width="25px"></button>
 
                                 <!-- DELETAR -->
-                                <button><img src="Symbian/App-Blue.png" height="25px" width="25px" title="Deletar"></button>
+                                <button><img src="../../Symbian/App-Blue.png" height="25px" width="25px"></button>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <div id="btn-mais-produtos">
-                <button>Proxima página</button>
+            <div id="btn-mais-etiqueta">
+                <button>Atualizar Lista</button>
             </div>
         </div>
+
+        <!-----------------------------------------------------------------------
+        ---                   PÁGINA FORMULÁRIO                               ---
+        ------------------------------------------------------------------------>
+        
+        <div id="pagina-formulario">
+            <!-- CABEÇALHO DA PÁGINA -->
+            <div id="cabecalho">
+                <h1><img src="../../Symbian/Clipboard-Check-2.png" width="30px" height="30px">ETIQUETAS</h1>
+            </div>
+
+                <!-- CONTAINER 4 -->
+                <div class="containers" id="container-4">
+                    <div class="cab-titulo">
+                        <h2>Adicionar Etiqueta</h2>
+                    </div>    
+                    
+                    <div class="flex">
+                        <div class="below">
+                            <label for="">Padrão da Etiqueta</label>
+                            <select name="status">
+                                <option selected>Escolha um padrão</option>
+                                <option value="">Padrão 1</option>
+                                <option value="">Padrão 2</option>
+                                <option value="">Padrão 3</option>
+                                <option value="">Padrão 4</option>
+                                <option value="">Padrão 5</option>
+                            </select>
+                        </div>           
+                        <div class="below">
+                            <label for="">Nome da Etiqueta</label>
+                            <input  type="text" name="estoque-maximo" placeholder="">
+                        </div>
+                        <div class="below">
+                            <label for="">Margem  superior (cm)</label>
+                            <input  type="number" name="quantidade-atual" placeholder="">
+                        </div>
+                        <div class="below">
+                            <label for="">Margem Lateral (cm) </label>
+                            <input  type="number" name="estoque-minimo" placeholder="">
+                        </div>
+                        <div class="below">
+                            <label for="">Densidade Vertical (cm)</label>
+                            <input  type="number" name="estoque-minimo" placeholder="">
+                        </div>
+                        <div class="below">
+                            <label for="">Densidade horizontal (cm)</label>
+                            <input type="number" name="estoque-minimo" placeholder="">
+                        </div>
+                        <div class="below">
+                            <label for="">Altura da Etiqueta (cm)</label>
+                            <input type="number" name="estoque-minimo" placeholder="">
+                        </div>
+                        <div class="below">
+                            <label for="">Largura da Etiqueta (cm)</label>
+                            <input  type="number" name="estoque-minimo" placeholder="">
+                        </div>
+                        <div class="below">
+                            <label for="">Fonte da Etiqueta</label>
+                            <select name="fonte">
+                                <option selected>Escolha uma Fonte</option>
+                                <option value="">Fonte 1</option>
+                                <option value="">Fonte 2</option>
+                                <option value="">Fonte 3</option>
+                                <option value="">Fonte 4</option>
+                                <option value="">Fonte 5</option>
+                            </select>
+                        </div>
+                        <div class="below">
+                            <label for="">Tamanho da Fonte</label>
+                            <select name="tamanho da fonte">
+                                <option selected>Escolha um Tamanho</option>
+                                <option value="">6pt</option>
+                                <option value="">8pt</option>
+                                <option value="">10pt</option>
+                                <option value="">12pt</option>
+                                <option value="">14pt</option>
+                            </select>
+                        </div>
+                        <div class="below">
+                            <label for="">Limites de Caracteres Produtos</label>
+                            <input  type="number" name="estoque-minimo" placeholder="">
+                        </div>
+                        <div class="below">
+                            <label for="">Colunas na Pagina</label>
+                            <select name="colunas">
+                                <option selected>Quatidade de Colunas</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                            </select>
+                        </div>
+                        <div class="below">
+                            <label for="">Linhas na Pagina</label>
+                            <input type="number" name="estoque-minimo" placeholder="">
+                        </div>
+                        <div class="below">
+                            <label for="">Tamanho da Pagina</label>
+                            <select name="status">
+                                <option value=""> A4-21,0 X 29,7 cm</option>
+                                <option value="">Tamanho 2</option>
+                                <option value="">Tamanho 3</option>
+                                <option value="">Tamanho 4</option>
+                                <option value="">Tamanho 5</option>
+                            </select>
+                        </div>
+                        <div class="below">
+                            <label for="">Descrição do topo</label>
+                            <input type="text" name="estoque-minimo" placeholder="">
+                        </div>
+                        <div class="below">
+                        <label for="">Exibir código de Barra</label>
+                            <select name="status">
+                                <option value="sim">Sim</option>
+                                <option value="nao">Não</option>
+                            </select>
+                        </div>
+                        
+                        <div class="below">
+                            <label for="">Exibir Valor do Produto</label>
+                            <select name="status">
+                                <option value="sim">Sim</option>
+                                <option value="nao">Não</option>
+                            </select>
+                        </div> 
+                        <div class="below">
+                            <label for="">Exibir Número do Código Barra</label>
+                            <select name="status">
+                                <option value="sim">Sim</option>
+                                <option value="nao">Não</option>
+                            </select>
+                        </div>
+                       <!---- </div> -->
+                    </div>
+                </div>
+                <!-- BOTÃO -->
+                <div id="div-salvar-cancelar">
+                    <button id="btn-salvar" onclick="visualizacao()">Salvar</button>
+                    <button id="btn-voltar" onclick="visualizacao()">Cancelar</button>
+
+                </div>
+
+            </form>
+        </div>
     </body>
+    <script src="../../script.js"></script>
 </html>

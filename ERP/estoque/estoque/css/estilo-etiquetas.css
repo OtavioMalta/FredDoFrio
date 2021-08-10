@@ -198,16 +198,18 @@
     }
     
     /* =========================================================================================================== 
-    ======================================================== PÁGINA ============================================== 
+    ========================================= PÁGINA VISUALIZAÇÃo============================================== 
     ============================================================================================================== */
-    #pagina{
+    #pagina-visualizacao{
         background-color: white;
         height: 100%;
         width: 100%;
         margin: 10px 10px 10px 220px;
         border-radius: 30px;
     }
-    
+    #pagina-formulario{
+        display: none;
+    }
     /* ========================================================================================================== 
     ================================================= CABEÇALHO ================================================= 
     ============================================================================================================= */
@@ -219,7 +221,7 @@
         display: flex;
     }
     #cabecalho h1{
-        margin: 10px 10px 0px 10px;
+        margin: 10px 10px 0px 20px;
         padding-bottom: 0px;
         color: white;
         font-size: 25px;
@@ -245,22 +247,22 @@
         border-radius: 5px 5px 0px 0px;
         text-shadow: 3px 3px 5px black;
     }
-    .flex{
+    #flex{
         padding: 5px;
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
     }
     .situ{
-        width: 160px;
+        width: 100px;
         font-size: 12px;
     }
-    #pagina #buscar #btn-buscar{
+    #pagina-visualizacao #buscar #btn-buscar{
         display: flex;
         justify-content: center;
     }
-    
     #buscar input{
+        width: 200px;
         height: 30px;
         border: 1px solid darkblue;
         border-radius: 5px;
@@ -279,9 +281,6 @@
         color: white;
         margin-bottom: 5px;
     }
-    .valor, .qtnd{
-        width: 160px;
-    }
     
     /* =================================================================================================     
     ==============================================  AÇÕES ==============================================            
@@ -289,23 +288,25 @@
     #acoes{
         margin: 10px 0px;
         padding: 5px;
+        height: 70px;
         display: flex;
-        justify-content: flex-end;
+        font-size: 20px;
+        align-items: center;
+        justify-content: center;
         background-color: rgb(159, 187, 233);
     }
-    #acoes button{
-        margin: 5px;
+    #acoes p{
         padding: 5px;
         border-radius: 5px;
-        color: #e6e6e6;
-        text-shadow: 3px 3px 5px #1e1e1e;
+        color: #070707;
+        text-shadow: 3px 3px 5px #333232;
         background-color: rgb(159, 187, 233);
     }
     
     /*================================================================================================= 
     ========================================  TABELA   ================================================ 
     ===================================================================================================*/
-    #produtos{
+    #etiqueta{
         margin-bottom: 40px;
         display: flex;
         justify-content: center;
@@ -322,23 +323,136 @@
     }
     thead{
         background-color: darkblue;
-        
     }
-    #produtos table button{
+    #etiqueta table button{
         margin: 5px 10px;
         background-color: rgb(159, 187, 233);
     }
-    #pagina #btn-mais-produtos {
+    #pagina-visualizacao #btn-mais-etiqueta{
         margin-bottom: 10px;
         display: flex;
         justify-content: center;
     }
-    #pagina #btn-mais-produtos button{
+    #pagina-visualizacao #btn-mais-etiqueta button{
         height: 30px;
         width: 100px;
         background-color: darkblue;
         color: white;
         margin-bottom: 5px;
     }
+
+    .research0{
+        margin: 20px 10px 20px 800px;
+    }
+
+    .research0 input{
+        text-align: center;
+    }
+     
+    #two-button{
+        display: flex;
+        margin: -60px 10px 20px 20px; 
+    }
+
+    #btn-add{
+        padding: 0px 10px 0px 10px;
+    }
+    #btn-voltar{
+        margin-left: 20px;
+        background-color: darkblue;
+        color: white;
+        padding: 0px 10px;
+        
+    }
+
+    #btn-add button{
+        font-size: 22px;
+        width: 200px;
+        height: 60px;
+    }
+
+    #btn-imp button{
+        font-size: 22px;
+        width: 200px;
+        height: 60px;
+    }
+
+    .scales0 input{
+        width: 20px;
+        height: 20px;
+    }
+/* =========================================================================================================== 
+    =================================== PÁGINA FORMULÁRIO============================================== 
+    ============================================================================================================== */
+    #pagina-formulario{
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        margin: 10px 10px 10px 220px;
+        border-radius: 30px;
+    }
     
+
+    /* ======================================================================================================== 
+    ========================================== CONTAINERS ===================================================== 
+    =========================================================================================================== */
+    #pagina-formulario .containers{
+        border: 2px solid darkblue;
+        margin: 2px 10px;
+        border-radius: 10px;
+        background-color: rgb(159, 187, 233);
+    }
+    #pagina-formulario .containers .flex{
+        display: flex;
+        justify-content: space-around;
+        flex-flow: wrap;
+    }
+    #pagina-formulario #container-5 input[type="file"]{
+        width: 100%;
+        margin: 10px;
+    }
+    #pagina-formulario #div-salvar-cancelar{
+        margin: 10px 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* ========================================================================================================== 
+    ================================================== INPUTS =================================================== 
+    ============================================================================================================= */
+    .flex{
+        padding: 10px;
+    }
+
+    #pagina-formulario input{
+        width: 400px;
+        height: 35px;
+        border: 1px solid darkblue;
+        border-radius: 5px;
+        margin: 10px 10px 3px 0px;
+    }
+    #pagina-formulario select{
+        width: 400px;
+        height: 35px;
+        border: 1px solid darkblue;
+        border-radius: 5px;
+        margin: 10px 10px 3px 0px;
+    }
+    #pagina-formulario #div-salvar-cancelar button{
+        height: 30px;
+        width: 100px;
+        background-color: darkblue;
+        color: white;
+        margin-bottom: 5px;
+    }
+
+    .below{
+        padding: 4px;
+    }
+
+    .below label{
+        font-weight: bold;
+        display: block;
+        padding-top: 0px;
+    }   
 }
