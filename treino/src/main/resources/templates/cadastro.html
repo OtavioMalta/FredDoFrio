@@ -1,0 +1,36 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<style>
+label {
+    display: block;
+    font: .9rem 'Fira Sans', sans-serif;
+}
+
+input[type='submit'],
+label {
+    margin-top: 1rem;
+}
+
+</style>
+<body>
+<form action="/save"  method="POST">
+<div>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="nome">
+</div>
+
+<div>
+    <label for="pass">Password (8 characters minimum):</label>
+    <input type="password" id="pass" name="senha"
+           minlength="8" required>
+</div>
+
+<input type="submit" value="Sign in">
+
+<ul th:each="usuario : ${usuarios}">
+	<li th:text="${usuario.nome}"></li>
+	<li th:text="${usuario.senha}"></li>
+</ul>
+
+</form>
+</body>
+</html>
